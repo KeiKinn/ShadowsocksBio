@@ -3,31 +3,31 @@
 by JingX
 > 时间会遗忘的。	
 
-[前言]## 前言
+[前言](##前言)
 
 翻越GFW有很多种方法，大浪淘沙，很多的方法都已经消失了，在我能够想起来的过去的，现在的，做一简单的记录：
-[经典思路]### 经典思路
+[经典思路](###经典思路)
 
 1. 修改电脑内部的host文件，通过自主指定相关网站的IP地址的方式实现，这种方式现在依然存在；
 2. GFW主要攻击手段之一是DNS污染，于是便有了强制指定DNS的方式以避免IP被污染的方法，这种方法经常会结合1使用；
 3. 原本用来作为一种匿名，安全，保密的VPN服务也被发掘出翻墙的潜力，其原理比较简单，选择一个没有被GFW封杀的服务器，通过该服务器将相关网站的流量转发到自己的设备，而设备与VPN服务器之间的通信并不在GFW的屏蔽范围之内，于是便达成了翻墙的目的。VPN最初的目的是用于企业服务，方便员工远程登录企业内网进行操作，主要协议有PPTP、L2TP、IPsec、IKEv2、openVPN等等；
 4. GoAgent，自由门，fqrouter等一系列网络服务；
 
-[新思路]### 新思路
+[新思路](###新思路)
 4. Shadowsocks类：主要包括各类Shadowsocks衍生版本，ShadowsocksR，Shadowsocks-libev等，特点是加密了通信过程中的数据；
 5. 内网穿透：比较典型的是[ZeroTier](https://www.zerotier.com)，简单解释就是假装自己在国外上网；
 6. V2Ray：V2Ray 是 Project V 下的一个工具。Project V 是一个包含一系列构建特定网络环境工具的项目，而 V2Ray 属于最核心的一个。官方中介绍Project V 提供了单一的内核和多种界面操作方式。内核（V2Ray）用于实际的网络交互、路由等针对网络数据的处理，而外围的用户界面程序提供了方便直接的操作流程。不过从时间上来说，先有 V2Ray才有Project V；
 7. 大杀器：奇怪的名字，似乎是一个有趣的人开发的，个人没有关注过。
 
-[Shadowsocks]## Shadowsocks
-[一些历史事件]### 一些历史事件
+[Shadowsocks](##Shadowsocks)
+[一些历史事件](###一些历史事件)
 2012年4月22日，V2EX用户clowwindy分享了一个自己自用一年多的翻墙工具：**Shadowsocks**
 ![](image/cwpostss.png)
 相对于以前的VPN技术，SS的一个大特点就是网络分流技术，配置文件中的网站走代理通道，之外的全部走直连通道，相较于以前所有的流量只能走代理通道，不需要代理的网站上网速度也会受到影响，着实提升了上网体验。
 
 之后的SS的发展比较顺利，各个平台的客户端也如雨后春笋逐渐建立起来，最初的SS客户端都内置了节点信息，虽然速度略慢，但丰俭由人，普通用户安装后无需配置即可食用，有需求有技术的群体也可以使用自己的服务器。唯一遗憾的是当年的iOS上并没有网络通道的权限，要么使用ss浏览器有限翻墙，要么越狱安装客户端全局代理。
 
-[风云突变]#### 风云突变
+[风云突变](####风云突变)
 **2015年8月20日**，clowwindy在GitHub发出如下一段话：
 
 >Two days ago the police came to me and wanted me to stop working on this. Today they asked me to delete all the code from GitHub. I have no choice but to obey.
@@ -47,7 +47,7 @@ I believe you guys will make great stuff with Network Extensions.
 ![](image/cw.png)
 至此，SS原作者退出。
 
-[一些话]#### 一些话
+[一些话](####一些话)
 
 ShadowsocksR的作者breakwa11是一个极富争议性的人，她接手了后续SS的开发工作，却违反开源协议封闭源代码，同时发布的过程中暗示自己是原作者，在[shadosocks-windows/Issue108](https://github.com/shadowsocks/shadowsocks-windows/issues/293#issuecomment-132253168)中clowwindy做出了一些回应：
 >那是自然的咯。这边加了什么功能，它马上扒过去合并了。它那边加了什么却不会贡献出来给其他人用，久而久之，不就是它那边功能更多了吗。
@@ -66,7 +66,7 @@ ShadowsocksR的作者breakwa11是一个极富争议性的人，她接手了后�
 
 值得反思。
 
-[SSR之死]#### SSR之死
+[SSR之死](####SSR之死)
 
 紧接着breakwa11的遭遇不论真假，同样令人胆寒
 
@@ -78,13 +78,13 @@ ShadowsocksR的作者breakwa11是一个极富争议性的人，她接手了后�
 
 至此，SSR作者退出
 
-[ 传承]##  传承
+[ 传承](## 传承)
 
 得益于clowwindy最初开源SS的决定，大量的fork使得SS依然在更新之中，从GitHub现有结果来看，各个平台（甚至是路由器）的SS仍然不断的在更新，在提交Issue，也有大功能更新，每一滴微小的力量都推动着项目的前进，只是前途在何处仍然是未知数。
 
-[变数]## 变数
+[变数](##变数)
 
-[ 收紧的手]###  收紧的手
+[ 收紧的手](### 收紧的手)
 
 2017年7月底，中国区App Store多款VPN相关应用在无任何说明与通知的情况下，突然集体被下架，与正常下架流程不同的是，过去苹果官方下架的应用一般可以在用户的已购项目中仍然可以下载，这是对已经购买了该应用的用户权益的保障，而这次的下架直接封杀了所有渠道的下载，性质不同于以往，苹果给出的回应是：
 
@@ -104,7 +104,7 @@ ShadowsocksR的作者breakwa11是一个极富争议性的人，她接手了后�
 
 > 《公安机关互联网安全监督检查规定》已经2018年9月5日公安部部长办公会议通过，现予发布，自**2018年11月1日**起施行。 
 
-[ 小心翼翼]###  小心翼翼
+[ 小心翼翼](### 小心翼翼)
 
 网传的一份联通客户端对于各个协议的识别情况：
 
@@ -126,11 +126,11 @@ ShadowsocksR的作者breakwa11是一个极富争议性的人，她接手了后�
 
 
 
-[ 新生代]##  新生代
+[ 新生代](## 新生代)
 
 所有的主流平台中，iOS 是比较特殊的，因为其权限管理相当的严格，直到 iOS9 时代才对开发者开放VPN 相关的 Network Extension 权限，但 SS 相关软件在 iOS 上不温不火，直到 Surge 的出现。
 
-[ Surge --- 破局者]####  Surge --- 破局者
+[ Surge --- 破局者](#### Surge --- 破局者)
 
 Surge，虽然出生于 iOS 平台，但其思路打破了之前 SS 圈内的桎梏，再次促进了 SS 生态的发展。
 
@@ -143,7 +143,7 @@ Surge 的模式非常具有开创性：
 
 ![](image/surge1.png)
 
-[题外话]##### 题外话
+[题外话](#####题外话)
 
 Surge 固然好，但是其开发者 Yachen Liu 却着实是一个富有争议的人，整理的 Surge 时间线如下：
 
@@ -169,7 +169,7 @@ Surge 固然好，但是其开发者 Yachen Liu 却着实是一个富有争议�
 
 作者对高价的解释是 Surge 是面向国际的网络调试设备，主要竞品是老牌应用 Charles，但是这几年的发展下来，调试功能这种核心并没有实质的长进，反盗版能力，UI设计倒是提升不少，口嫌体直般升级了 SS 的最新版本，却死活不肯添加 V2ray 等新协议，面向国际的软件却只有国内用户，可以说是相当的傲娇。
 
-[Shadowrocket --- 穿云箭]#### Shadowrocket --- 穿云箭
+[Shadowrocket --- 穿云箭](####Shadowrocket --- 穿云箭)
 
 Surge 下架上架来回折腾的时候，不少开发者也看到了机遇，Shadowrocket 便是当时的 Surge 追随者，最初上架性能虽然不佳，但是6元的售价并且兼容Surge规则还是吸引了不少人下载，一时间风头无两，被称为小火箭。
 
@@ -181,7 +181,7 @@ Surge 下架上架来回折腾的时候，不少开发者也看到了机遇，Sh
 
 现在的小火箭可以说已经尽善尽美了，18元的售价也是非常的亲民。
 
-[Others]#### Others
+[Others](####Others)
 
 iOS上还有A.BIG.T，Potatso等VPN软件，16年17年与小火箭战的难舍难分，无奈后劲不足，现在大概是明日黄花了。
 
@@ -189,13 +189,13 @@ iOS上还有A.BIG.T，Potatso等VPN软件，16年17年与小火箭战的难舍�
 
 ![Quantumult](image/Quantumult.png)
 
-[个人搭建指南]# 个人搭建指南
+[个人搭建指南](#个人搭建指南)
 
-[服务器选择]## 服务器选择
+[服务器选择](##服务器选择)
 
 一般来说，VPS的虚拟化技术分为 OpenVZ 与 KVM 架构，从各种资源以及 SS 服务支持上，建议选择KVM架构的机器，以下所有的说明都是基于搬瓦工 KVM 建构的机器。
 
-[服务器系统]## 服务器系统
+[服务器系统](##服务器系统)
 
 服务器建议安装带有BBR技术的Linux系统，TCP BBR 拥塞控制算法由 Google 开发，并提交到了 Linux 内核，从 4.9 开始，Linux 内核已经用上了该算法。根据以往的传统，Google 总是先在自家的生产环境上线运用后，才会将代码开源，此次也不例外。根据实地测试，在部署了最新版内核并开启了 TCP BBR 的机器上，网速甚至可以提升好几个数量级。
 
@@ -203,7 +203,7 @@ iOS上还有A.BIG.T，Potatso等VPN软件，16年17年与小火箭战的难舍�
 
 ![](image/newOS.png)
 
-[Shadowsocks-libev]## Shadowsocks-libev
+[Shadowsocks-libev](##Shadowsocks-libev)
 
 随着技术发展，SS与墙之间的交锋也是一次比一次激烈，据传说，即使是SS的256位加密，运营商可以做到解密，监视SS使用者的上网流量，真实性未知，但小心点总不会错。
 
@@ -216,13 +216,13 @@ iOS上还有A.BIG.T，Potatso等VPN软件，16年17年与小火箭战的难舍�
 
 现阶段为了能在安全与速度之间取得平衡，有一种SS的配置脱颖而出：Shadowsocks-libev + obfs混淆
 
-[obfs 混淆]#### obfs 混淆
+[obfs 混淆](####obfs 混淆)
 
 obfs 混淆最大的作用是对 SS 流量进行伪装, 在不添加obfs的情况下, 运营商服务器通过的流量为未知的加密流量, 据说 GFW 已经有一定的包检测的能力, 仅仅加密流量具有一定的风险, 添加 obfs http 模式之后, 通过运营商的流量会被识别为设定好的网址的流量, 假设你设定的是 bing, 那么你的 SS 流量会被判别为你当前正在访问 bing, 减少了被封杀的可能性，**tls模式安全性高于http模式**。
 
 之前流量不是无限的时代, 因为只有运营商的 APP 可以无限使用流量, 比如什么天翼视讯, 利用 obfs 混淆, 可以将你的手机流量伪装为天翼视讯的流量, 从而达到无限使用使用流量, 这种操作太骚, 实测可以成功, 不过还是低调的好.
 
-[Shadowsocks-libev安装与配置]### Shadowsocks-libev安装与配置
+[Shadowsocks-libev安装与配置](###Shadowsocks-libev安装与配置)
 
 安装图省心推荐秋水逸冰的[一键安装脚本](https://teddysun.com/357.html)
 
@@ -277,18 +277,18 @@ obfs 混淆最大的作用是对 SS 流量进行伪装, 在不添加obfs的情�
    查看状态：/etc/init.d/shadowsocks-libev status
    ```
 
-[Shadowsocks客户端]## Shadowsocks客户端
+[Shadowsocks客户端](##Shadowsocks客户端)
 
 SS 客户端已经全平台覆盖了, Github 上有专门的开源客户端项目.
 
-[Windows]### Windows
+[Windows](###Windows)
 
-[下载地址]#### 下载地址
+[下载地址](####下载地址)
 
 - [Win SS客户端下载地址](https://github.com/shadowsocks/shadowsocks-windows/releases)
 - [SS obfs-local插件下载地址](https://github.com/shadowsocks/simple-obfs/releases)
 
-[本地配置]#### 本地配置
+[本地配置](####本地配置)
 
 服务器端已将安装了 obfs, 本地端直接下载obfs-local插件, 解压后**将插件 obfs-local 与Shdowsocks.exe 同一路径下**即可.
 
@@ -300,11 +300,11 @@ obfs可以直接在SS的服务器编辑页面修改参数
 
 插件选项为 **obfs=http;obfs-host=www.bing.com**, 实际上可以将 www.bing.com 更换为任意的一个网址, 只要不是被GFW封杀的就可以, 推荐像腾讯视频, 优酷, bing这种流量较大的网站, ~~如果填写是Google或者YouTube, 活着不好么......~~
 
-[macos]### macos
+[macos](###macos)
 
 ~~macos上的ss客户端目前似乎还是不支持obfs混淆.~~
 2018/10/06更新
-[Shadowsocks-NG]#### Shadowsocks-NG
+[Shadowsocks-NG](####Shadowsocks-NG)
 
 GitHub上存在好几种Mac客户端，使用最广的是Shadowsocks-NG，目前的版本中已经支持obfs混淆，并且已经直接集成于客户端之中，按照windows的设置填写参数即可。
 ![](image/macOSNG.png)
@@ -312,7 +312,7 @@ GitHub上存在好几种Mac客户端，使用最广的是Shadowsocks-NG，目前
 - [Shadowsocks-NG 下载地址](https://github.com/shadowsocks/ShadowsocksX-NG/releases)
 - [SS obfs-local插件下载地址](https://github.com/shadowsocks/simple-obfs/releases)
 
-[ClashX]#### ClashX
+[ClashX](####ClashX)
 
 最近出现了一个新的类Surge软件，ClashX，目前还在开发之中，但是兼容Surge的config文件，基本上对其稍作修改便可以导入ClashX中使用。可以去官方[ Telegram 群](t.me/clash_discuss)参与讨论
 
@@ -322,11 +322,11 @@ GitHub上存在好几种Mac客户端，使用最广的是Shadowsocks-NG，目前
 
 - [ClashX 下载地址](https://github.com/yichengchen/clashX/releases)
 
-[Surge]#### Surge
+[Surge](####Surge)
 
 支持，没钱截图😂
 
-[iOS]### iOS
+[iOS](###iOS)
 
 iOS上推荐的客户端为 Shadowrocket 与 Surge, 首推  Shadowrocket, 因为便宜够用, 唯一遗憾的是国区下架了, 只能用非国区的 Apple ID 购买与下载, Surge3 目前可以在国区下载, 虽然 Surge 是配置文件类开创者, UI 更好看, 功能更强大,颇高的上手难度与328的价格会吓退不少人，但一句话，Surge 贵在稳定。
 
@@ -334,24 +334,26 @@ iOS上推荐的客户端为 Shadowrocket 与 Surge, 首推  Shadowrocket, 因为
 
 2018年10月8日更新：Quantumult 最近热度也上来了，在小火箭与 Quantumult 任选其一既可。
 
-[Surge]#### Surge
+[Surge](####Surge)
 
 Surge 在编辑服务器的 Advance 设置中可以配置混淆
 
 ![surge](image/surge.png)
 
-[Shadowrocket]#### Shadowrocket
+[Shadowrocket](####Shadowrocket)
 
 shadowrocket在服务器的编辑页面中即可设置混淆
 
 ![sr](image/sr.png)
 
-[Andorid]### Andorid
+[Andorid](###Andorid)
 
 推荐在Google Play上下载Shadowsocks app, 同时下载obfs插件, 开发者均为 Max Lv. 
 
 也可以前往 [Shadowsocks-Andorid](https://github.com/shadowsocks/shadowsocks-android/releases) 的 GitHub 仓库下载。
 
 ![](image/ass.png)
+
+
 
 

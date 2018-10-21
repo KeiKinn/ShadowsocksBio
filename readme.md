@@ -198,7 +198,7 @@ iOS上还有A.BIG.T，Potatso等VPN软件，16年17年与小火箭战的难舍�
 
 搬瓦工的机器可以在控制面板 ---> install new os ---> centos-7-x86_64-bbr，快速更换系统，注意备份服务器上的数据。
 
-![](image/Screen Shot 2018-09-11 at 23.59.54.png)
+![](image/newOS.png)
 
 ## Shadowsocks-libev
 
@@ -305,9 +305,10 @@ obfs可以直接在SS的服务器编辑页面修改参数
 #### Shadowsocks-NG
 
 GitHub上存在好几种Mac客户端，使用最广的是[Shadowsocks-NG](https://github.com/shadowsocks/ShadowsocksX-NG/releases)，目前的版本中已经支持obfs混淆，并且已经直接集成于客户端之中，按照windows的设置填写参数即可。
-![](image/Screen Shot 2018-10-06 at 23.09.39.png)
+![](image/macOSNG.png)
 
 #### ClashX
+
 最近出现了一个新的类Surge软件，[ClashX](https://github.com/yichengchen/clashX/releases)，目前还在开发之中，但是兼容Surge的config文件，基本上对其稍作修改便可以导入ClashX中使用。可以去官方[ Telegram 群](t.me/clash_discuss)参与讨论
 
 类Surge软件的核心都在于config文件，在SS网络分流的基础上，对不同的流量产生不同的行为，可以实现指定网址代理，广告屏蔽等效果，自由度更高。

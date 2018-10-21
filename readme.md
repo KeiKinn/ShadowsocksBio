@@ -3,7 +3,10 @@
 by JingX
 > 时间会遗忘的。
 
-## 方式方法
+[TOC]
+
+## 前言
+
 翻越GFW有很多种方法，大浪淘沙，很多的方法都已经消失了，在我能够想起来的过去的，现在的，做一简单的记录：
 ### 经典思路
 
@@ -144,11 +147,11 @@ Surge 的模式非常具有开创性：
 
 ##### 题外话
 
-Surge 固然好，但是其开发者 Yachen Liu 却着实是一个富有争议的人：
+Surge 固然好，但是其开发者 Yachen Liu 却着实是一个富有争议的人，整理的 Surge 时间线如下：
 
 - 2015年10月26日 Surge 以68元的售价上架 App Store；
 
-- 2015年11月29日 Yachen Liu 自称被喝茶（无法被证实）；
+- 2015年11月29日 Yachen Liu 自称被喝茶（注：无法被证实）；
 
 - 2015 年 12 月 4 日 ，Surge App Store **全区下架**，之后又以648元的高价短期上线，作者解释为方便已购买用户更新；
 
@@ -184,17 +187,19 @@ Surge 下架上架来回折腾的时候，不少开发者也看到了机遇，Sh
 
 iOS上还有A.BIG.T，Potatso等VPN软件，16年17年与小火箭战的难舍难分，无奈后劲不足，现在大概是明日黄花了。
 
-[**Quantumult **](https://itunes.apple.com/us/app/quantumult/id1252015438#?platform=iphone)是新近崛起的一款代理软件，$4.99的售价可以实现Surge的大部分功能，支持多种协议，相较于小火箭又多出了抓包功能，测试规则更方便，同时，Quantumult 扩展了规则中的屏蔽性能，使得屏蔽广告更有针对性。
+[**Quantumult **](https://itunes.apple.com/us/app/quantumult/id1252015438#?platform=iphone)是新近崛起的一款代理软件，$4.99 的售价可以实现 Surge 的大部分功能，支持多种协议，相较于小火箭又多出了抓包功能，测试规则更方便，同时，Quantumult 扩展了规则中的屏蔽性能，使得屏蔽广告更有针对性。
+
+![Quantumult](image/Quantumult.png)
 
 # 个人搭建指南
 
 ## 服务器选择
 
-一般来说，VPS的虚拟化技术分为OpenVZ与KVM架构，从各种资源以及SS服务支持上，建议选择KVM架构的机器，以下所有的说明都是基于搬瓦工KVM建构的机器。
+一般来说，VPS的虚拟化技术分为 OpenVZ 与 KVM 架构，从各种资源以及 SS 服务支持上，建议选择KVM架构的机器，以下所有的说明都是基于搬瓦工 KVM 建构的机器。
 
 ## 服务器系统
 
-服务器建议安装带有BBR技术的Linux系统，TCP BBR拥塞控制算法由Google开发，并提交到了 Linux 内核，从 4.9 开始，Linux 内核已经用上了该算法。根据以往的传统，Google 总是先在自家的生产环境上线运用后，才会将代码开源，此次也不例外。根据实地测试，在部署了最新版内核并开启了 TCP BBR 的机器上，网速甚至可以提升好几个数量级。
+服务器建议安装带有BBR技术的Linux系统，TCP BBR 拥塞控制算法由 Google 开发，并提交到了 Linux 内核，从 4.9 开始，Linux 内核已经用上了该算法。根据以往的传统，Google 总是先在自家的生产环境上线运用后，才会将代码开源，此次也不例外。根据实地测试，在部署了最新版内核并开启了 TCP BBR 的机器上，网速甚至可以提升好几个数量级。
 
 搬瓦工的机器可以在控制面板 ---> install new os ---> centos-7-x86_64-bbr，快速更换系统，注意备份服务器上的数据。
 
@@ -282,9 +287,8 @@ SS 客户端已经全平台覆盖了, Github 上有专门的开源客户端项�
 
 #### 下载地址
 
-[SS客户端下载地址](https://github.com/shadowsocks/shadowsocks-windows/releases)
-
-[SS obfs-local插件下载地址](https://github.com/shadowsocks/simple-obfs/releases)
+- [Win SS客户端下载地址](https://github.com/shadowsocks/shadowsocks-windows/releases)
+- [SS obfs-local插件下载地址](https://github.com/shadowsocks/simple-obfs/releases)
 
 #### 本地配置
 
@@ -304,26 +308,31 @@ obfs可以直接在SS的服务器编辑页面修改参数
 2018/10/06更新
 #### Shadowsocks-NG
 
-GitHub上存在好几种Mac客户端，使用最广的是[Shadowsocks-NG](https://github.com/shadowsocks/ShadowsocksX-NG/releases)，目前的版本中已经支持obfs混淆，并且已经直接集成于客户端之中，按照windows的设置填写参数即可。
+GitHub上存在好几种Mac客户端，使用最广的是Shadowsocks-NG，目前的版本中已经支持obfs混淆，并且已经直接集成于客户端之中，按照windows的设置填写参数即可。
 ![](image/macOSNG.png)
+
+- [Shadowsocks-NG 下载地址](https://github.com/shadowsocks/ShadowsocksX-NG/releases)
+- [SS obfs-local插件下载地址](https://github.com/shadowsocks/simple-obfs/releases)
 
 #### ClashX
 
-最近出现了一个新的类Surge软件，[ClashX](https://github.com/yichengchen/clashX/releases)，目前还在开发之中，但是兼容Surge的config文件，基本上对其稍作修改便可以导入ClashX中使用。可以去官方[ Telegram 群](t.me/clash_discuss)参与讨论
+最近出现了一个新的类Surge软件，ClashX，目前还在开发之中，但是兼容Surge的config文件，基本上对其稍作修改便可以导入ClashX中使用。可以去官方[ Telegram 群](t.me/clash_discuss)参与讨论
 
 类Surge软件的核心都在于config文件，在SS网络分流的基础上，对不同的流量产生不同的行为，可以实现指定网址代理，广告屏蔽等效果，自由度更高。
 
 ![](image/clashX.png)
 
+- [ClashX 下载地址](https://github.com/yichengchen/clashX/releases)
 
 #### Surge
+
 支持，没钱截图😂
 
 ### iOS
 
 iOS上推荐的客户端为 Shadowrocket 与 Surge, 首推  Shadowrocket, 因为便宜够用, 唯一遗憾的是国区下架了, 只能用非国区的 Apple ID 购买与下载, Surge3 目前可以在国区下载, 虽然 Surge 是配置文件类开创者, UI 更好看, 功能更强大,颇高的上手难度与328的价格会吓退不少人，但一句话，Surge 贵在稳定。
 
-两款客户端均支持 obfs, Surge2 仅支持 http 模式, Surge3 支持 tls  与 http 两种模式; shadowrocket 支持 http 与 tls 两种模式
+两款客户端均支持 obfs, Surge 2 仅支持 http 模式, Surge 3 支持 tls  与 http 两种模式; shadowrocket 支持 http 与 tls 两种模式
 
 2018年10月8日更新：Quantumult 最近热度也上来了，在小火箭与 Quantumult 任选其一既可。
 

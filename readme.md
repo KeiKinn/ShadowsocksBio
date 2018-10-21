@@ -3,7 +3,41 @@
 by JingX
 > 时间会遗忘的。
 
-
+  * [前言](#--)
+    + [经典思路](#----)
+    + [新思路](#---)
+  * [Shadowsocks大事件](#Shadowsocks大事件)
+    + [一些历史事件](#------)
+      - [风云突变](#----)
+      - [一些话](#---)
+      - [SSR之死](#ssr--)
+  * [传承](#--)
+  * [变数](#--)
+    + [收紧的手](#----)
+    + [小心翼翼](#----)
+  * [新生代](#---)
+      - [Surge --- 破局者](#Surge--------)
+        * [题外话](#---)
+      - [Shadowrocket --- 穿云箭](#Shadowrocket--------)
+      - [Others](#others)
+- [个人搭建指南](#------)
+  * [服务器选择](#-----)
+  * [服务器系统](#-----)
+  * [Shadowsocks-libev](#shadowsocks-libev)
+      - [obfs 混淆](#obfs---)
+    + [Shadowsocks-libev安装与配置](#shadowsocks-libev-----)
+  * [Shadowsocks客户端](#shadowsocks---)
+    + [Windows](#windows)
+      - [下载地址](#----)
+      - [本地配置](#----)
+    + [macos](#macos)
+      - [Shadowsocks-NG](#shadowsocks-ng)
+      - [ClashX](#clashx)
+      - [Surge](#surge)
+    + [iOS](#ios)
+      - [Surge](#surge-1)
+      - [Shadowrocket](#shadowrocket)
+    + [Andorid](#andorid)
 
 ## 前言
 

@@ -344,7 +344,7 @@ obfs可以直接在SS的服务器编辑页面修改参数
 #### Shadowsocks-NG
 
 GitHub上存在好几种Mac客户端，使用最广的是Shadowsocks-NG，目前的版本中已经支持obfs混淆，并且已经直接集成于客户端之中，按照windows的设置填写参数即可。
-![](image/macOSNG.png)
+![](image/macOsNG.png)
 
 - [Shadowsocks-NG 下载地址](https://github.com/shadowsocks/ShadowsocksX-NG/releases)
 - [SS obfs-local插件下载地址](https://github.com/shadowsocks/simple-obfs/releases)

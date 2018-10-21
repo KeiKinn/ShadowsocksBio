@@ -1,4 +1,4 @@
-# SS一些杂七杂八的
+# Shadowsocks 笔记
 
 by JingX
 > 时间会遗忘的。

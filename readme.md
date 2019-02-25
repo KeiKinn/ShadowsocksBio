@@ -366,7 +366,7 @@ GitHub上存在好几种Mac客户端，使用最广的是Shadowsocks-NG，目前
 
 iOS上推荐的客户端为 Shadowrocket 与 Surge, 首推  Shadowrocket, 因为便宜够用, 唯一遗憾的是国区下架了, 只能用非国区的 Apple ID 购买与下载, Surge3 目前可以在国区下载, 虽然 Surge 是配置文件类开创者, UI 更好看, 功能更强大,颇高的上手难度与328的价格会吓退不少人，但一句话，Surge 贵在稳定。
 
-两款客户端均支持 obfs, Surge 2 仅支持 http 模式, Surge 3 支持 tls  与 http 两种模式; shadowrocket 支持 http 与 tls 两种模式
+两款客户端均支持 obfs, Surge 2 与 Surge 3 均支持 tls  与 http 两种模式; shadowrocket 支持 http 与 tls 两种模式
 
 2018年10月8日更新：Quantumult 最近热度也上来了，在小火箭与 Quantumult 任选其一既可。
 

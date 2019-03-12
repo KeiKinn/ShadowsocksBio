@@ -20,6 +20,10 @@ by JingX
         * [题外话](#---)
       - [Shadowrocket --- 穿云箭](#Shadowrocket--------)
       - [Others](#others)
+      - [Android](#android)
+        * [Postern](#postern)
+  * [总结](#---)
+  * [后记](#---)
 - [个人搭建指南](#------)
   * [服务器选择](#-----)
   * [服务器系统](#-----)
@@ -37,7 +41,9 @@ by JingX
     + [iOS](#ios)
       - [Surge](#surge-1)
       - [Shadowrocket](#shadowrocket)
-    + [Andorid](#andorid)
+    + [Android](#Android)
+      - [Shadowsocks](#shadowsocks)
+      - [Postern](#postern)
 
 ## 前言
 
@@ -226,6 +232,20 @@ iOS上还有A.BIG.T，Potatso等VPN软件，16年，17年与小火箭战的难�
 
 ![Quantumult](image/Quantumult.png)
 
+#### Android
+
+Android 理应有更多的选择，然而事实却完全相反，在 Android 上实现分流代理的软件反倒非常的稀少，且质量良莠不齐。
+
+##### Postern
+
+Postern是在 Android 上最接近于 Surge 模式的软件，其可以兼容 Surge 规则，直接将 Surge 的配置文件导入即可使用，整体功能也算中规中矩，但是 Postern 的 UI 相对简陋，作者对此的解释是：
+
+> 很多Postern用户抱怨软件UI的问题，确实UI比较简陋。主要是Postern是从Linux下一堆C代码演化过来的，刚开始并没有任何UI只有命令行，开发者只求运行稳定快速。我也希望能强化UI，不过无奈主业实在太忙，最近更是几乎没有时间维护。仅就今后尽量改进吧。 
+
+截止目前（2019/03/12），Postern Android 版仍未支持混淆，SSR 之后兴起的新型加密格式也未获得支持，如果有相关的需求可以尝试，对于一般人来说也许 shadowsocks 更为合适些。Postern 可以在 Google Play Store 获取，同时 Postern 的 Github 中包含了[说明手册](https://github.com/postern-overwal/postern-stuff)，从 Github 的文件来看，作者同时也放出了 Mac 版的安装包，在 iOS 美区也可以购买 iOS 版。
+
+![postern](image/postern.png)
+
 #### 总结
 
 总体来看，得益于 Surge 的开创性思路，iOS 端的代理软件一度诸侯林立，逐鹿中原，相关软件的讨论也是层出不穷，是一段相当甜美的蜜月期。随着政策的逐渐收紧，潮水退去，国区内基本上已经没有太多的选择，蛰伏至外区的软件们随着各类原因或离开或留下，如今天下大势已定，或许很难比较各自的用户数量，但几大软件已经有了稳定的核心用户群，Surge 还在稳扎稳打走着自己的路，Shadowrocket 与 Quantumult 的开发已经陷入停滞，新入门的代理软件仍需在夹缝中找寻自己的位置。
@@ -398,11 +418,16 @@ shadowrocket在服务器的编辑页面中即可设置混淆
 
 ![sr](image/sr.png)
 
-### Andorid
+### Android
+
+#### Shadowsocks
 
 推荐在Google Play上下载Shadowsocks app, 同时下载obfs插件, 开发者均为 Max Lv. 
 
-也可以前往 [Shadowsocks-Andorid](https://github.com/shadowsocks/shadowsocks-android/releases) 的 GitHub 仓库下载。
+也可以前往 [Shadowsocks-Android](https://github.com/shadowsocks/shadowsocks-android/releases) 的 GitHub 仓库下载。
 
 ![](image/ass.png)
 
+#### Postern 
+
+Postern 目前尚不支持混淆模式。

@@ -1,5 +1,6 @@
 # Shadowsocks 笔记
-![AUTHOR](https://img.shields.io/badge/AUTHOR-JingX-green.svg)![LICENSE](https://img.shields.io/badge/LICENSE-CC--BY--SA--4.0-9cf.svg)
+![AUTHOR](https://img.shields.io/badge/AUTHOR-JingX-green.svg)
+![LICENSE](https://img.shields.io/badge/LICENSE-CC--BY--SA--4.0-9cf.svg)
 
 > 时间会遗忘的。
 

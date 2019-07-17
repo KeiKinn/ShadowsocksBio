@@ -1,34 +1,19 @@
 DOMAIN-SUFFIX,quora.com,Proxy
 DOMAIN-KEYWORD,justmysocks,Proxy
 DOMAIN-KEYWORD,notion,Proxy
-DOMAIN-SUFFIX,javbus.com,Proxy
-DOMAIN-KEYWORD,avgle,Proxy
 DOMAIN-KEYWORD,dayone,Proxy
 DOMAIN-SUFFIX,dw.com,Proxy
-DOMAIN-SUFFIX,gstatic.com,Proxy
-DOMAIN-SUFFIX,redd.it,Proxy
-DOMAIN-SUFFIX,redditmedia.com,Proxy
 DOMAIN-SUFFIX,bbc.com,Proxy
-DOMAIN-SUFFIX,amazon.co.jp,Proxy
-DOMAIN-KEYWORD,ampproject,Proxy
 DOMAIN-KEYWORD,vimeo,Proxy
 DOMAIN-KEYWORD,wired.com,Proxy
 DOMAIN,i.pximg.net,Proxy
 DOMAIN-KEYWORD,pixiv,Proxy
-DOMAIN-KEYWORD,acg18,Proxy
-DOMAIN-SUFFIX,gmail.com,Proxy
-DOMAIN,64.233.188.109,Proxy
-DOMAIN,108.177.97.108,Proxy
 DOMAIN-KEYWORD,calendar-12,Proxy
 DOMAIN-KEYWORD,hockeyapp,Proxy
 DOMAIN-KEYWORD,smartmailcloud,Proxy
 DOMAIN-KEYWORD,dropbox,Proxy
 DOMAIN-KEYWORD,teddysun,Proxy
 DOMAIN-KEYWORD,arduino,Proxy
-DOMAIN-KEYWORD,viidii.info,Proxy
-DOMAIN-SUFFIX,pornhub.com,Proxy
-DOMAIN-KEYWORD,pron.tv,Proxy
-DOMAIN-KEYWORD,hentai,Proxy
 DOMAIN,bandwagonhost.com,Proxy
 DOMAIN-KEYWORD,mega.nz,Proxy
 DOMAIN-KEYWORD,pinterest,Proxy
@@ -51,32 +36,45 @@ DOMAIN-KEYWORD,wolframalpha,Proxy
 DOMAIN-KEYWORD,giphy,Proxy
 DOMAIN-SUFFIX,workflow.is,Proxy
 DOMAIN-SUFFIX,slideshare.net,Proxy
+// R18
+DOMAIN-SUFFIX,javbus.com,Proxy
+DOMAIN-KEYWORD,avgle,Proxy
+DOMAIN-KEYWORD,acg18,
+DOMAIN-SUFFIX,pornhub.com,Proxy
+DOMAIN-KEYWORD,pron.tv,Proxy
+DOMAIN-KEYWORD,hentai,Proxy
+DOMAIN-SUFFIX,91porn.com,Proxy
+DOMAIN-SUFFIX,t66y.com,Proxy
+DOMAIN-SUFFIX,wnacg.com,Proxy
+// Amazon 
 DOMAIN,www.amazon.com,Proxy
+DOMAIN-SUFFIX,amazon.co.uk,Proxy
+DOMAIN-SUFFIX,amazonaws.com,Proxy
+DOMAIN-SUFFIX,amazon.co.jp,Proxy
 DOMAIN,mathstud.io,Proxy
 DOMAIN,time.com,Proxy
+// Netfilx
 DOMAIN-KEYWORD,netflix,Proxy
 DOMAIN-KEYWORD,nflximg.com,Proxy
 DOMAIN-SUFFIX,nflxext.com,Proxy
 DOMAIN-SUFFIX,nflxvideo.net,Proxy
-DOMAIN-SUFFIX,tvb.com,Proxy
+// Line
 DOMAIN-SUFFIX,line-cdn.net,Proxy
 DOMAIN-SUFFIX,line-apps.com,Proxy
 DOMAIN-SUFFIX,line.me,Proxy
 DOMAIN-SUFFIX,line.naver.jp,Proxy
+// reddit
+DOMAIN-SUFFIX,reddit.com,Proxy
+DOMAIN-SUFFIX,redd.it,Proxy
+DOMAIN-SUFFIX,redditmedia.com,Proxy
 DOMAIN-SUFFIX,soundcloud.com,Proxy
-DOMAIN-SUFFIX,amazon.co.uk,Proxy
 DOMAIN-SUFFIX,icili.tv,Proxy
 DOMAIN-SUFFIX,idousou.com,Proxy
-DOMAIN-SUFFIX,reddit.com,Proxy
-DOMAIN-SUFFIX,deepmind.com,Proxy
 DOMAIN-SUFFIX,theinitium.com,Proxy
 DOMAIN-SUFFIX,forfrigg.com,Proxy
 DOMAIN-SUFFIX,cdninstagram.com,Proxy
 DOMAIN-SUFFIX,10musume.com,Proxy
-DOMAIN-SUFFIX,4chan.org,Proxy
 DOMAIN-SUFFIX,500px.com,Proxy
-DOMAIN-SUFFIX,91porn.com,Proxy
-DOMAIN-SUFFIX,amazonaws.com,Proxy
 DOMAIN-SUFFIX,archive.org,Proxy
 DOMAIN-SUFFIX,bit.ly,Proxy
 DOMAIN-SUFFIX,blog.com,Proxy
@@ -87,8 +85,6 @@ DOMAIN-SUFFIX,blogger.com,Proxy
 DOMAIN-SUFFIX,bloomberg.com,Proxy
 DOMAIN-SUFFIX,box.com,Proxy
 DOMAIN-SUFFIX,catcatbox.com,Proxy
-DOMAIN-SUFFIX,catholic.org.hk,Proxy
-DOMAIN-SUFFIX,catholic.org.tw,Proxy
 DOMAIN-SUFFIX,cbc.ca,Proxy
 DOMAIN-SUFFIX,cbsnews.com,Proxy
 DOMAIN-SUFFIX,chromercise.com,Proxy
@@ -105,11 +101,16 @@ DOMAIN-SUFFIX,emule-ed2k.com,Proxy
 DOMAIN-SUFFIX,facebook.com,Proxy
 DOMAIN-SUFFIX,facebook.net,Proxy
 DOMAIN-KEYWORD,firefox,Proxy
+// git
 DOMAIN-SUFFIX,gitbooks.io,Proxy
 DOMAIN-SUFFIX,github.com,Proxy
 DOMAIN-SUFFIX,github.io,Proxy
 DOMAIN-SUFFIX,githubapp.com,Proxy
 DOMAIN-SUFFIX,githubusercontent.com,Proxy
+// twitter
+DOMAIN-SUFFIX,twitter.com,Proxy
+DOMAIN-KEYWORD,twimg.com,Proxy
+DOMAIN-SUFFIX,t.co,Proxy
 DOMAIN-SUFFIX,imgchili.net,Proxy
 DOMAIN-SUFFIX,imgs.cc,Proxy
 DOMAIN-SUFFIX,imgspice.com,Proxy
@@ -123,8 +124,6 @@ DOMAIN-SUFFIX,openwrt.org,Proxy
 DOMAIN-SUFFIX,putty.org,Proxy
 DOMAIN-SUFFIX,shadowsocks.org,Proxy
 DOMAIN-SUFFIX,stackoverflow.com,Proxy
-DOMAIN-SUFFIX,t.co,Proxy
-DOMAIN-SUFFIX,t66y.com,Proxy
 DOMAIN-SUFFIX,teamviewer.com,Proxy
 DOMAIN-SUFFIX,telegram.org,Proxy
 DOMAIN-SUFFIX,theguardian.com,Proxy
@@ -133,8 +132,6 @@ DOMAIN-SUFFIX,tumblr.com,Proxy
 DOMAIN-SUFFIX,nyt.com,Proxy
 DOMAIN-SUFFIX,nytimes.com,Proxy
 DOMAIN-SUFFIX,nytimg.com,Proxy
-DOMAIN-SUFFIX,twitter.com,Proxy
-DOMAIN-KEYWORD,twimg.com,Proxy
 DOMAIN-SUFFIX,typekit.net,Proxy
 DOMAIN-SUFFIX,typepad.com,Proxy
 DOMAIN-SUFFIX,uploaded.net,Proxy
@@ -151,10 +148,7 @@ DOMAIN-SUFFIX,wikipedia.com,Proxy
 DOMAIN-SUFFIX,wikipedia.org,Proxy
 DOMAIN-SUFFIX,willw.net,Proxy
 DOMAIN-SUFFIX,wireshark.org,Proxy
-DOMAIN-SUFFIX,wixoo.com,Proxy
-DOMAIN-SUFFIX,wnacg.com,Proxy
 DOMAIN-SUFFIX,wolfax.com,Proxy
-DOMAIN-SUFFIX,woopie.jp,Proxy
 DOMAIN-KEYWORD,wordpress,Proxy
 DOMAIN-SUFFIX,wordproaudio.com,Proxy
 DOMAIN-SUFFIX,worldcat.org,Proxy
@@ -164,17 +158,22 @@ DOMAIN-KEYWORD,wsj,Proxy
 DOMAIN-SUFFIX,www.w3schools.com,Proxy
 DOMAIN-SUFFIX,xda-developers.com,Proxy
 DOMAIN-SUFFIX,yahoo.com,Proxy
-DOMAIN-SUFFIX,youtu.be,Proxy
-DOMAIN-SUFFIX,youtube.com,Proxy
-DOMAIN-SUFFIX,youtube-nocookie.com,Proxy
 DOMAIN-KEYWORD,54.169.137.99,Proxy
+// Google
 DOMAIN,64.233.188.108,Proxy
 DOMAIN,59.37.97.57,Proxy
 DOMAIN,202.117.80.4,Proxy
 DOMAIN,74.125.23.108,Proxy
 DOMAIN,64.233.189.108,Proxy
-DOMAIN-SUFFIX,goagent.biz,Proxy
-DOMAIN-SUFFIX,goagentplus.com,Proxy
+DOMAIN,64.233.188.109,Proxy
+DOMAIN,108.177.97.108,Proxy
+DOMAIN-SUFFIX,deepmind.com,Proxy
+DOMAIN-KEYWORD,ampproject,Proxy // 谷歌网站加速
+DOMAIN-SUFFIX,gstatic.com,Proxy
+DOMAIN-SUFFIX,gmail.com,Proxy
+DOMAIN-SUFFIX,youtu.be,Proxy
+DOMAIN-SUFFIX,youtube.com,Proxy
+DOMAIN-SUFFIX,youtube-nocookie.com,Proxy
 DOMAIN-SUFFIX,goo.gl,Proxy
 DOMAIN-SUFFIX,google.co.jp,Proxy
 DOMAIN-SUFFIX,google.com,Proxy

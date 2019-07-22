@@ -69,7 +69,6 @@ DOMAIN-SUFFIX,redd.it
 DOMAIN-SUFFIX,redditmedia.com
 DOMAIN-SUFFIX,soundcloud.com
 DOMAIN-SUFFIX,icili.tv
-DOMAIN-SUFFIX,idousou.com
 DOMAIN-SUFFIX,theinitium.com
 DOMAIN-SUFFIX,forfrigg.com
 DOMAIN-SUFFIX,cdninstagram.com
@@ -84,7 +83,6 @@ DOMAIN-SUFFIX,blogcdn.com
 DOMAIN-SUFFIX,blogger.com
 DOMAIN-SUFFIX,bloomberg.com
 DOMAIN-SUFFIX,box.com
-DOMAIN-SUFFIX,catcatbox.com
 DOMAIN-SUFFIX,cbc.ca
 DOMAIN-SUFFIX,cbsnews.com
 DOMAIN-SUFFIX,chromercise.com
@@ -143,17 +141,12 @@ DOMAIN-SUFFIX,voachineseblog.com
 DOMAIN-SUFFIX,voanews.com
 DOMAIN-SUFFIX,wikileaks.org
 DOMAIN-SUFFIX,wikimedia.org
-DOMAIN-SUFFIX,wikimedia.org.mo
 DOMAIN-SUFFIX,wikipedia.com
 DOMAIN-SUFFIX,wikipedia.org
 DOMAIN-SUFFIX,willw.net
 DOMAIN-SUFFIX,wireshark.org
-DOMAIN-SUFFIX,wolfax.com
 DOMAIN-KEYWORD,wordpress
-DOMAIN-SUFFIX,wordproaudio.com
-DOMAIN-SUFFIX,worldcat.org
 DOMAIN-SUFFIX,worldjournal.com
-DOMAIN-SUFFIX,wow-life.net
 DOMAIN-KEYWORD,wsj
 DOMAIN-SUFFIX,www.w3schools.com
 DOMAIN-SUFFIX,xda-developers.com

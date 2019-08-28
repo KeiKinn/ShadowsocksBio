@@ -120,6 +120,7 @@ DOMAIN-SUFFIX,zhanzhang.baidu.com
 DOMAIN-SUFFIX,znsv.baidu.com
 DOMAIN-SUFFIX,zz.bdstatic.com
 # others
+DOMAIN-KEYWORD,trafficjunky
 DOMAIN-KEYWORD,umtrack
 DOMAIN-KEYWORD,umeng
 DOMAIN-SUFFIX,tanx.com

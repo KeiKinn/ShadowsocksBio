@@ -1,3 +1,3 @@
 USER-AGENT,BaiduWallet*
 USER-AGENT,sublime-version-check/3.0,REJECT // sublime version check
-USER-AGENT,http://wanproxy.127.net/lbs?version=1.0,REJECT // netease music version check
+DOMAIN,http://wanproxy.127.net/lbs?version=1.0,REJECT // netease music version check

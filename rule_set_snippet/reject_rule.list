@@ -77,6 +77,7 @@ DOMAIN-SUFFIX,pagead-tpc.l.google.com
 DOMAIN-SUFFIX,partner.googleadservices.com
 DOMAIN-SUFFIX,static.googleadsserving.cn
 DOMAIN-SUFFIX,tpc.googlesyndication.com
+DOMAIN-SUFFIX,adservice.google.com
 # baidu
 DOMAIN-SUFFIX,a.baidu.com
 DOMAIN-SUFFIX,adm.baidu.com

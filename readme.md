@@ -165,9 +165,13 @@ SS 一键安装脚本先驱秋水逸冰在twitter上发推：
 
 > 斟酌再三，还是觉得已经没有继续坚持下去的必要了。 不如就此告别，后会有期。 [https://teddysun.com/548.html ](https://t.co/AfkNolQGgd) 
 
-#### 2019/5/15
+​											
 
 长期关注无线路由器相关固件的恩山论坛上，lean，hiboy，荒野无灯，abccba94等多名重要维护者宣布退出。
+
+#### 2019/09/16 - 2019/09/xx
+
+国家网络安全宣传周，大量的机场出现大规模节点被封的情况，个别机场的ip甚至全数被封。推特上有人反应甚至出现平常仅使用ssh进行网络学习的服务器被封的情况。  
 
 ###  小心翼翼
 
@@ -251,6 +255,8 @@ Surge 下架上架来回折腾的时候，不少开发者也看到了机遇，Sh
 iOS上还有A.BIG.T，Potatso等VPN软件，16年，17年与小火箭战的难舍难分，无奈后劲不足，现在大概是明日黄花了。
 
 [Quantumult](https://itunes.apple.com/us/app/quantumult/id1252015438#?platform=iphone) 是新近崛起的一款代理软件，$4.99 的售价可以实现 Surge 的大部分功能，支持多种协议，相较于小火箭又多出了抓包功能，测试规则更方便，同时，Quantumult 扩展了规则中的屏蔽性能，使得屏蔽广告更有针对性。
+
+（2019/09）Quantumult 的更新已经陷入停滞，目前作者似乎在 Testflight 上开发了全新的 Quantumult X，基本特性与 Surge 4 相似。
 
 ![Quantumult](image/Quantumult.png)
 

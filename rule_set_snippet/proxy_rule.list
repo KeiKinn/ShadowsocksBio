@@ -44,6 +44,7 @@ DOMAIN-SUFFIX,pornhub.com
 DOMAIN-KEYWORD,pron.tv
 DOMAIN-KEYWORD,phncdn
 DOMAIN-KEYWORD,hentai
+DOMAIN-KEYWORD,xvideos
 DOMAIN-SUFFIX,91porn.com
 DOMAIN-SUFFIX,t66y.com
 DOMAIN-SUFFIX,wnacg.com
@@ -149,7 +150,7 @@ DOMAIN-SUFFIX,wireshark.org
 DOMAIN-KEYWORD,wordpress
 DOMAIN-SUFFIX,worldjournal.com
 DOMAIN-KEYWORD,wsj
-DOMAIN-SUFFIX,www.w3schools.com
+DOMAIN-SUFFIX,w3schools.com
 DOMAIN-SUFFIX,xda-developers.com
 DOMAIN-SUFFIX,yahoo.com
 DOMAIN-KEYWORD,54.169.137.99
@@ -171,6 +172,8 @@ DOMAIN-SUFFIX,youtube-nocookie.com
 DOMAIN-SUFFIX,goo.gl
 DOMAIN-SUFFIX,google.co.jp
 DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,google.de
+DOMAIN-SUFFIX,google.ca
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,googlecode.com
 DOMAIN-SUFFIX,googlegroups.com

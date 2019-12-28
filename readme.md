@@ -377,7 +377,12 @@ obfs 混淆最大的作用是对 SS 流量进行伪装, 在不添加obfs的情�
    重启：/etc/init.d/shadowsocks-libev restart
    查看状态：/etc/init.d/shadowsocks-libev status
    ```
-
+   
+5. 配置文件地址
+   ```shell
+   //etc/shadowsocks-libev/config.json
+   ```
+   
 ## Shadowsocks客户端
 
 SS 客户端已经全平台覆盖了, Github 上有专门的开源客户端项目.

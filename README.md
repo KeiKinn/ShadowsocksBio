@@ -343,7 +343,7 @@ obfs 混淆最大的作用是对 Shadowsocks 流量进行伪装，在不添加 o
 
 **请注意，秋水逸冰已经宣布放弃继续维护该脚本，因此该脚本可能随时会失效**
 
-1. 使用 root 用户 ssh 登录
+1. 使用 root 用户 SSH 登录
 
 ```
 $ wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh

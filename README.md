@@ -56,24 +56,29 @@
 
 ### 经典思路
 
-1. 修改电脑内部的 host 文件，通过自主指定相关网站的 IP 地址的方式实现，即避开 DNS，简单粗暴，这种方式现在依然存在；
-2. GFW 主要攻击手段之一是 DNS 污染，于是便有了强制指定 DNS 的方式以避免 IP 被污染的方法，这种方法经常会结合 1 使用；
-3. 原本用来作为一种匿名，安全，保密的 VPN 服务也被发掘出翻墙的潜力，其原理比较简单，选择一个没有被 GFW 封杀的服务器，通过该服务器将相关网站的流量转发到自己的设备，而设备与 VPN 服务器之间的通信并不在 GFW 的屏蔽范围之内，于是便达成了翻墙的目的。VPN 最初的目的是用于企业服务，方便员工远程登录企业内网进行操作，主要协议有 PPTP、L2TP、IPsec、IKEv2、openVPN 等等；
-4. GoAgent，自由门，fqrouter 等一系列网络服务；
+1. 修改电脑内部的 `host` 文件，通过自主指定相关网站的 IP 地址的方式实现，即避开 DNS，简单粗暴，这种方式现在依然存在。
+2. GFW 主要攻击手段之一是 DNS 污染，于是便有了强制指定 DNS 的方式以避免 IP 被污染的方法，这种方法经常会结合 `1.` 使用。
+3. 原本用来作为一种匿名，安全，保密的 VPN 服务也被发掘出翻墙的潜力，其原理比较简单，选择一个没有被 GFW 封杀的服务器，通过该服务器将相关网站的流量转发到自己的设备，而设备与 VPN 服务器之间的通信并不在 GFW 的屏蔽范围之内，于是便达成了翻墙的目的。VPN 最初的目的是用于企业服务，方便员工远程登录企业内网进行操作，主要协议有 PPTP、L2TP、IPsec、IKEv2、OpenVPN 等。
+4. GoAgent、自由门和 fqrouter 等网络服务。
 
 ### 新思路
-4. Shadowsocks 类：主要包括各类 Shadowsocks 衍生版本，ShadowsocksR，Shadowsocks-libev 等，特点是加密了通信过程中的数据以及流量分流；
-5. 内网穿透：比较典型的是 [ZeroTier](https://www.zerotier.com)，简单解释就是假装自己在国外上网，这么说的主要原因是因为当两台设备同时加入到 ZeroTier 的服务器之后，两台设备会拥有同一 IP 段内的 IP 地址，此时两台电脑相当于处于一个虚拟局域网之中，可以用 iPad 连接电脑远程运行 MATLAB；
-6. V2Ray：V2Ray 是 Project V 下的一个工具。Project V 是一个包含一系列构建特定网络环境工具的项目，而 V2Ray 属于最核心的一个。官方介绍 Project V 提供了单一的内核和多种界面操作方式。内核（V2Ray）用于实际的网络交互、路由等针对网络数据的处理，而外围的用户界面程序提供了方便直接的操作流程。不过从时间上来说，先有 V2Ray 才有 Project V；
-7. 大杀器：奇怪的名字，似乎是一个有趣的人开发的，个人没有关注过。
+
+1. Shadowsocks 类：主要包括各类 Shadowsocks 衍生版本，Shadowsocks-libev 和 ShadowsocksR 等，特点是加密了通信过程中的数据以及流量分流。
+2. 内网穿透：比较典型的是 [ZeroTier](https://www.zerotier.com)，简单解释就是假装自己在国外上网，这么说的主要原因是因为当两台设备同时加入到 ZeroTier 的服务器之后，两台设备会拥有同一 IP 段内的 IP 地址，此时两台电脑相当于处于一个虚拟局域网之中，可以用 iPad 连接电脑远程运行 MATLAB。
+3. V2Ray：是 Project V 下的一个工具。Project V 是一个包含一系列构建特定网络环境工具的项目，而 V2Ray 属于最核心的一个。官方介绍 Project V 提供了单一的内核和多种界面操作方式。内核（V2Ray）用于实际的网络交互、路由等针对网络数据的处理，而外围的用户界面程序提供了方便直接的操作流程。不过从时间上来说，先有 V2Ray 才有 Project V。
+4. 大杀器：奇怪的名字，似乎是一个有趣的人开发的，个人没有关注过。
 
 ## Shadowsocks
+
 ### 一些历史事件
+
 2012 年 4 月 22 日，V2EX 用户 clowwindy 分享了一个自己自用一年多的翻墙工具：**Shadowsocks**
+
 ![](image/cwpostss.png)
+
 相对于以前的 VPN 技术，Shadowsocks 的一个大特点就是网络分流技术，配置文件中的网站走代理通道，配置文件之外的地址全部走直连通道，相较于以前所有的流量只能走代理通道，不需要代理的网站上网速度会因为流量需要通过远程服务器转发至设备而受到影响，极大地提升了上网体验。
 
-之后的 Shadowsocks 的发展比较顺利，各个平台的客户端也如雨后春笋逐渐建立起来，最初的 Shadowsocks 客户端都内置了节点信息，虽然速度略慢，但丰俭由人，普通用户安装后无需配置即可食用，有需求有技术的群体也可以使用自己的服务器。唯一遗憾的是当年的 iOS 上并没有网络通道的权限，要么使用 ss 浏览器有限翻墙，要么越狱安装客户端实现 Shadowsocks 代理。
+之后的 Shadowsocks 的发展比较顺利，各个平台的客户端也如雨后春笋逐渐建立起来，最初的 Shadowsocks 客户端都内置了节点信息，虽然速度略慢，但丰俭由人，普通用户安装后无需配置即可食用，有需求有技术的群体也可以使用自己的服务器。唯一遗憾的是当年的 iOS 上并没有网络通道的权限，要么使用 Shadowsocks 浏览器有限翻墙，要么越狱安装客户端实现 Shadowsocks 代理。
 
 #### 风云突变
 
@@ -86,14 +91,15 @@
 
 > Cheers!
 
-当晚，clowwindy 把他所维护的几个 Shadowsocks 实现的代码仓库内的 Issue 面板全部关闭，所有帮助信息全部删除，所有的描述都改成了 Something happened。另外，他还清空了该组织的 membership，或者将所有成员全部转入隐私状态，不对外公开。
+当晚，clowwindy 把他所维护的几个 Shadowsocks 实现的代码仓库内的 Issues 关闭，所有帮助信息全部删除，所有的描述都改成了 Something happened。另外，他还清空了该组织的 membership，或者将所有成员全部转入隐私状态，不对外公开。
 
-**2015 年 8 月 21 日 ** 传出 clowwindy 被请去喝茶的消息，他在 Shadowsocks-windows 的 #305 Issue 下回复道
+**2015 年 8 月 21 日** 传出 clowwindy 被请去喝茶的消息，他在 Shadowsocks-windows 的 Issue#305 下回复道：
 
 > I was invited for some tea yesterday. I won’t be able to continue developing this project.
 
-同时开启了 Twitter 的隐私保护，除先前关注者外无法查看动态；
-当晚 clowwindy 发布了 thanks. 后的推文，证明人没事。
+同时开启了 Twitter 的隐私保护，除先前关注者外无法查看动态。
+
+当晚 clowwindy 发布了 `thanks.` 后的推文，证明人没事。
 
 ![](image/cw.png)
 
@@ -101,12 +107,15 @@
 
 #### 一些话
 
-后续工作并未停止，前前后后也着实发生了很多的事情，前因后果在此不计。ShadowsocksR 的作者 breakwa11 是一个极富争议性的人，她接手了后续 Shadowsocks 的开发工作，却违反开源协议封闭源代码，同时发布的过程中暗示自己是原作者，在 [shadosocks-windows/Issue108](https://github.com/shadowsocks/shadowsocks-windows/issues/293#issuecomment-132253168) 中 clowwindy 做出了一些回应：
+后续工作并未停止，前前后后也着实发生了很多的事情，前因后果在此不计。
+
+ShadowsocksR 的作者 breakwa11 是一个极富争议性的人，她接手了后续 Shadowsocks 的开发工作，却违反开源协议封闭源代码，同时发布的过程中暗示自己是原作者，在 [Shadosocks-windows Issue#293](https://github.com/shadowsocks/shadowsocks-windows/issues/293#issuecomment-132253168) 中 clowwindy 做出了一些回应：
+
 > 那是自然的咯。这边加了什么功能，它（ShadowsocksR）马上扒过去合并了。它那边加了什么却不会贡献出来给其他人用，久而久之，不就是它那边功能更多了吗。
 
-> 一直以来我什么都没说是因为我对他还有点希望，所以得给他一点面子不是。一开始我还只是纳闷他为什么不发 pull request，过了一段时间我才明白，这个世界上也有这一类的人。不尊重 GPL 就算了，把作者名字换成自己的，还在主页上加上官方的字样。为什么我们这边反而不说官方呢？因为我希望这个项目是没有官方的，人人都是贡献者。想不到这个社会人人都围着官转，人人都巴不得当官 。
+> 一直以来我什么都没说是因为我对他还有点希望，所以得给他一点面子不是。一开始我还只是纳闷他为什么不发 Pull request，过了一段时间我才明白，这个世界上也有这一类的人。不尊重 GPL 就算了，把作者名字换成自己的，还在主页上加上官方的字样。为什么我们这边反而不说官方呢？因为我希望这个项目是没有官方的，人人都是贡献者。想不到这个社会人人都围着官转，人人都巴不得当官。
 
-> 既然他没有尊重别人劳动成果的意愿，那他那些不开源的理由想必也只是借口。说因为加了一些试验性功能会不兼容所以暂不开源。他弄了一个混淆 TCP 协议头功能，在界面上标注提升安全性，吸引用户打开，然后安装他自己的不兼容服务端。然而我分析了一下之后发现这个功能的设计就是想当然，用得多了以后反而会增加特征。如果你真有什么试验性功能，不是更应该开放出来让所有人帮你分析么，大家一起讨论么？在加密算法领域，只有经过足够多人和机构的审视的算法，才能视作是安全的，闭门造出来的怎么能用。。
+> 既然他没有尊重别人劳动成果的意愿，那他那些不开源的理由想必也只是借口。说因为加了一些试验性功能会不兼容所以暂不开源。他弄了一个混淆 TCP 协议头功能，在界面上标注提升安全性，吸引用户打开，然后安装他自己的不兼容服务端。然而我分析了一下之后发现这个功能的设计就是想当然，用得多了以后反而会增加特征。如果你真有什么试验性功能，不是更应该开放出来让所有人帮你分析么，大家一起讨论么？在加密算法领域，只有经过足够多人和机构的审视的算法，才能视作是安全的，闭门造出来的怎么能用。
 
 > 当然啦，大部分用户才不会管这些，他们不会分析你是不是真的安全，也不会做道德判断，只要他们觉得好用就行。所以可以看到，这种环境下开源其实并没有什么优势，只不过为一些人抄袭提供了便利。这种环境下最后留下来的都是这些人。
 
@@ -120,19 +129,19 @@
 
 #### ShadowsocksR 之死
 
-紧接着 breakwa11 的遭遇不论真假，同样令人胆寒
+紧接着 breakwa11 的遭遇不论真假，同样令人胆寒。
 
 2017 年 7 月 19 日，breakwa11 在 Telegram 频道 ShadowsocksR news 里转发了深圳市启用 Shadowsocks 协议检测结果，被大量用户转发，引发恐慌。
 
-2017 年 7 月 27 日，breakwa11 遭到自称 "ESU.TV" 的不明身份人士人身攻击，对方宣称如果不停止开发并阻止用户讨论此事件将发布更多包含个人隐私的资料，随后 breakwa11 表示遭到对方人肉搜索并公开的个人资料属于完全无关人士，是自己当时随便填写的信息，为了防止对方继续伤害无关人士，breakwa11 删除 GitHub 上的所有代码、解散相关交流群组，停止 ShadowsocksR 项目。
+2017 年 7 月 27 日，breakwa11 遭到自称「ESU.TV」的不明身份人士人身攻击，对方宣称如果不停止开发并阻止用户讨论此事件将发布更多包含个人隐私的资料，随后 breakwa11 表示遭到对方人肉搜索并公开的个人资料属于完全无关人士，是自己当时随便填写的信息，为了防止对方继续伤害无关人士，breakwa11 删除 GitHub 上的所有代码、解散相关交流群组，停止 ShadowsocksR 项目。
 
-> 这次的人肉事件，让我严重怀疑我自己做 ShadowsocksR 是不是对的，首先不管资料对不对，从行为上看，就是有人希望我死，希望这个项目死，恨一个人能恨到如此程度。我知道我很做作，因此得罪了很多人，尤其最近公开 Shadowsocks 可被检测的问题，更是让很多人义愤填膺，非要干掉我不可。尽管从我的角度看，我只是希望通过引起关注然后促进 Shadowsocks 那边进行修改，这并不是希望 Shadowsocks 死掉的意思，我每次提出的问题之后不是都得到了改进了吗，包括 OTA 和 AEAD，AEAD 我也是有参与设计的，你们可以问 Syrone Wong，以及 NoisyFox 证实，而且 ss-windows 有一部分也是我参与修改的。但如今，人肉的资料我也稍微看了一下，真是太令人心寒，连对方的支付宝流水都拉出来了，这样真的好吗？我并不希望因为我自己的问题而害了另一个人。我期望和那些反对我的人来一笔交易，我可以以停止开发 ShadowsocksR 作为交换，删除项目及相关的东西，以后不再出现，ShadowsocksR 群从此解散，账号注销，删除代码。对于我来说，这个项目不过是我用来证实自己的想法的一个东西，可有可无，制作也只是兴趣，扔掉也没有什么可惜的，反正替代品非常多，根本就不缺我这一个。你们老说我圈粉，你们真想太多了，真没这个必要。如果可以以这个换取另一人免受网络暴力，我也觉得这是值得的。相反的，如果人肉的结果仍然公开了，那就是我的行为已经救不了了，那我就可以继续开发 ShadowsocksR。不过也不会太久，估计最多只多坚持一年到我毕业之前。谢谢这两年来大家的支持，这次应该是真正的和大家再见，看结果吧，今天晚上 12 点以 ShadowsocksR 群解散作为标志，如果解散了那就正式和大家说一声再见
+> 这次的人肉事件，让我严重怀疑我自己做 ShadowsocksR 是不是对的，首先不管资料对不对，从行为上看，就是有人希望我死，希望这个项目死，恨一个人能恨到如此程度。我知道我很做作，因此得罪了很多人，尤其最近公开 Shadowsocks 可被检测的问题，更是让很多人义愤填膺，非要干掉我不可。尽管从我的角度看，我只是希望通过引起关注然后促进 Shadowsocks 那边进行修改，这并不是希望 Shadowsocks 死掉的意思，我每次提出的问题之后不是都得到了改进了吗，包括 OTA 和 AEAD，AEAD 我也是有参与设计的，你们可以问 Syrone Wong，以及 NoisyFox 证实，而且 Shadowsocks-windows 有一部分也是我参与修改的。但如今，人肉的资料我也稍微看了一下，真是太令人心寒，连对方的支付宝流水都拉出来了，这样真的好吗？我并不希望因为我自己的问题而害了另一个人。我期望和那些反对我的人来一笔交易，我可以以停止开发 ShadowsocksR 作为交换，删除项目及相关的东西，以后不再出现，ShadowsocksR 群从此解散，账号注销，删除代码。对于我来说，这个项目不过是我用来证实自己的想法的一个东西，可有可无，制作也只是兴趣，扔掉也没有什么可惜的，反正替代品非常多，根本就不缺我这一个。你们老说我圈粉，你们真想太多了，真没这个必要。如果可以以这个换取另一人免受网络暴力，我也觉得这是值得的。相反的，如果人肉的结果仍然公开了，那就是我的行为已经救不了了，那我就可以继续开发 ShadowsocksR。不过也不会太久，估计最多只多坚持一年到我毕业之前。谢谢这两年来大家的支持，这次应该是真正的和大家再见，看结果吧，今天晚上 12 点以 ShadowsocksR 群解散作为标志，如果解散了那就正式和大家说一声再见。
 
 至此，ShadowsocksR 作者退出。
 
 ## 传承
 
-得益于 clowwindy 最初开源 Shadowsocks 的决定，大量的 fork 使得 Shadowsocks 依然在更新之中，从 GitHub 现有结果来看，各个平台（甚至是路由器）的 Shadowsocks 仍然不断的在更新，在提交 Issue，也有大功能更新，每一滴微小的力量都推动着项目的前进，只是前途在何处仍然是未知数。
+得益于 clowwindy 最初开源 Shadowsocks 的决定，大量的 Fork 使得 Shadowsocks 依然在更新之中，从 GitHub 现有结果来看，各个平台（甚至是路由器）的 Shadowsocks 仍然不断的在更新，在提交 Issue，也有大功能更新，每一滴微小的力量都推动着项目的前进，只是前途在何处仍然是未知数。
 
 ## 变数
 
@@ -140,67 +149,67 @@
 
 2017 年 7 月底，中国区 App Store 多款 VPN 相关应用在无任何说明与通知的情况下，突然集体被下架，与正常下架流程不同的是，过去苹果官方下架的应用一般可以在用户的已购项目中仍然可以下载，这是对已经购买了该应用的用户权益的保障，而这次的下架直接封杀了国行 App Store 所有渠道的下载，性质显然不同于以往，苹果给出的回应是：
 
-> 我们已经收到要求，在中国移除一些不符合规范的 VPN App。这些 App 在其他市场的运营则不受影响 
+> 我们已经收到要求，在中国移除一些不符合规范的 VPN App。这些 App 在其他市场的运营则不受影响。
 
 此次下架中所谓的规范即指 2017 年 1 月工业和信息化部印发的《关于清理规范互联网网络接入服务市场的通知》，《通知》中明确表明：
 
-> 规范的对象是未经电信主管部门批准，无国际通信业务经营资质的企业或个人，租用国际专线或 VPN，私自开展跨境的电信业务经营活动。外贸企业、跨国企业因办公自用等原因，需要通过专线等方式跨境联网时，可以向依法设置国际通信出入口局的电信业务经营者租用，《通知》的相关规定不会对其正常运转造成影响。 
+> 规范的对象是未经电信主管部门批准，无国际通信业务经营资质的企业或个人，租用国际专线或 VPN，私自开展跨境的电信业务经营活动。外贸企业、跨国企业因办公自用等原因，需要通过专线等方式跨境联网时，可以向依法设置国际通信出入口局的电信业务经营者租用，《通知》的相关规定不会对其正常运转造成影响。
 
-受此影响，大量的用户只能与开发者联系，不少开发者只能通过 TestFlight 对用户分发更新，但是由于 TestFlight 分发的 app 90 天后就会失效，开发者一旦弃更，用户便无法再使用该软件，此种风险也使得不少用户注册了外区的 Apple ID 并重新购买应用。由于工信部要求备案，且个人无备案资格，基本上表明了此次被下架的应用无法再上架，此次的风波也受到了国际社会的广泛关注与批评，唯一算作欣慰的是，苹果在下架软件的同时，倒逼政府出台了相应的明确细则。
+受此影响，大量的用户只能与开发者联系，不少开发者只能通过 TestFlight 对用户分发更新，但是由于 TestFlight 分发的 App 90 天后就会失效，开发者一旦弃更，用户便无法再使用该软件，此种风险也使得不少用户注册了外区的 Apple ID 并重新购买应用。由于工信部要求备案，且个人无备案资格，基本上表明了此次被下架的应用无法再上架，此次的风波也受到了国际社会的广泛关注与批评，唯一算作欣慰的是，苹果在下架软件的同时，倒逼政府出台了相应的明确细则。
 
-2017 年 10 月，伴随着十九大的开幕，大量线路被封杀，尤其以 ShadowsocksR 为甚，各大机场与 tg 群一片哀嚎，所幸大会闭幕后不少 IP 被解封，不清楚具体的比例。
+2017 年 10 月，伴随着十九大的开幕，大量线路被封杀，尤其以 ShadowsocksR 为甚，各大机场与 Telegram 群组一片哀嚎，所幸大会闭幕后不少 IP 被解封，不清楚具体的比例。
 
-2018 年 1 月，以及接下来的两会期间，执行了更大规模的 IP 封杀，涉及范围更广，基于各种算法的翻墙方法均有涉及，Shadowsocks 的 Issue 中有人反映刚刚搭好十几分钟即被封杀。
+2018 年 1 月，以及接下来的两会期间，执行了更大规模的 IP 封杀，涉及范围更广，基于各种算法的翻墙方法均有涉及，Shadowsocks 的 Issues 中有人反映刚刚搭好十几分钟即被封杀。
 
-2018 年 9 月 30 日，公安部下发 [通知](http://www.mps.gov.cn/n2254314/n2254409/n4904353/c6263180/content.html)
+2018 年 9 月 30 日，公安部下发 [通知](http://www.mps.gov.cn/n2254314/n2254409/n4904353/c6263180/content.html)：
 
-> 《公安机关互联网安全监督检查规定》已经 2018 年 9 月 5 日公安部部长办公会议通过，现予发布，自 **2018 年 11 月 1 日 ** 起施行。 
+> 《公安机关互联网安全监督检查规定》已经 2018 年 9 月 5 日公安部部长办公会议通过，现予发布，自 **2018 年 11 月 1 日 ** 起施行。
 
 ### 时间线
 
-#### 2019/04/25
+#### 2019-04-25
 
 2019 年 4 月 25 日，河南省新密市人民检察院发出 [公告](http://www.ajxxgk.jcy.gov.cn/html/20190425/1/9344870.html )：
 
-> 2019 年 3 月 25 日，新密市人民检察院依法以提供侵入计算机系统工具罪对孙东洋提起公诉，案件正在进一步办理当中。 
+> 2019 年 3 月 25 日，新密市人民检察院依法以提供侵入计算机系统工具罪对孙东洋提起公诉，案件正在进一步办理当中。
 
-* 孙东洋即逗比根据地网站主创办人，长期以来，提供了各类 Shadowsocks 相关知识和安装使用教程，并编写与维护了大量的一键脚本，2018 年 11 月失联。*
+*孙东洋即逗比根据地网站主创办人，长期以来，提供了各类 Shadowsocks 相关知识和安装使用教程，并编写与维护了大量的一键脚本，2018 年 11 月失联。*
 
-#### 2019/05/14
+#### 2019-05-14
 
-Shadowsocks 一键安装脚本先驱秋水逸冰在 twitter 上发推：
+Shadowsocks 一键安装脚本先驱秋水逸冰在 Twitter 上发推：
 
-> 斟酌再三，还是觉得已经没有继续坚持下去的必要了。 不如就此告别，后会有期。 [https://teddysun.com/548.html ](https://t.co/AfkNolQGgd) 
+> 斟酌再三，还是觉得已经没有继续坚持下去的必要了。 不如就此告别，后会有期。
 
-​											
+[https://teddysun.com/548.html ](https://t.co/AfkNolQGgd)
 
-长期关注无线路由器相关固件的恩山论坛上，lean，hiboy，荒野无灯，abccba94 等多名重要维护者宣布退出。
+长期关注无线路由器相关固件的恩山论坛上，lean、hiboy、荒野无灯和 abccba94 等多名重要维护者宣布退出。
 
-#### 2019/09/16 - 2019/09/xx
+#### 2019-09-16 - 2019-09-xx
 
-国家网络安全宣传周，大量的机场出现大规模节点被封的情况，个别机场的 ip 甚至全数被封。推特上有人反应甚至出现平常仅使用 ssh 进行网络学习的服务器被封的情况。  
+国家网络安全宣传周，大量的机场出现大规模节点被封的情况，个别机场的 IP 甚至全数被封。推特上有人反应甚至出现平常仅使用 SSH 进行网络学习的服务器被封的情况。
 
 ### 小心翼翼
 
 网传的一份联通客户端对于各个协议的识别情况：
 
-| 软件和协议                 | 联通检测类型                                        | 访问网址     |
-| -------------------------- | --------------------------------------------------- | ------------ |
-| Shadowsocks                | TCP 业务                                            | 显示服务器 IP |
-| Shadowsocks + http_simple（80 端口） | 上网 (Web 方式 get)                                   | 显示混淆域名 |
-| ShadowsocksR                        | TCP 业务                                            | 显示服务器 IP |
-| ShadowsocksR + http_simple          | 上网 (Web 方式 get)                                   | 显示混淆域名 |
-| ShadowsocksR + TLS (443)             | * 安全类网页浏览 (HTTPS VPN) 流量 <br/>* HTTPS 链接 | 显示混淆域名 |
-| ShadowsocksR + TLS (995)             | 安全协议的收邮件流量                                | 显示 IP       |
-| ShadowsocksR + TLS (非 443)           | * 网络连接（网页）<br/>* HTTPS 链接                 | 显示混淆域名 |
-| OpenConnect                | UDP 业务                                            | 显示服务器 IP |
-| IPSec VPN                  | UDP 业务                                            | 显示服务器 IP |
-| V2Ray                      | TCP 业务                                            | 显示服务器 IP |
-| V2Ray + TLS                | HTTPS 网络连接                                      | 显示证书域名 |
-| nghttpx + TLS              | HTTPS 网络连接                                      | 显示证书域名 |
-| kcptun                     | UDP 业务                                            | 显示服务器 IP |
+| 软件和协议                          | 联通检测类型                                         | 访问网址      |
+| ----------------------------------- | ---------------------------------------------------- | ------------- |
+| Shadowsocks                         | TCP 业务                                             | 显示服务器 IP |
+| Shadowsocks + http_simple（80 端口）| 上网（Web 方式 get）                                 | 显示混淆域名  |
+| ShadowsocksR                        | TCP 业务                                             | 显示服务器 IP |
+| ShadowsocksR + http_simple          | 上网（Web 方式 get）                                 | 显示混淆域名  |
+| ShadowsocksR + TLS（443）           | * 安全类网页浏览 (HTTPS VPN) 流量<br /> * HTTPS 链接 | 显示混淆域名  |
+| ShadowsocksR + TLS（995）           | 安全协议的收邮件流量                                 | 显示 IP       |
+| ShadowsocksR + TLS（非 443）        | * 网络连接（网页）<br/>* HTTPS 链接                  | 显示混淆域名  |
+| OpenConnect                         | UDP 业务                                             | 显示服务器 IP |
+| IPSec VPN                           | UDP 业务                                             | 显示服务器 IP |
+| V2Ray                               | TCP 业务                                             | 显示服务器 IP |
+| V2Ray + TLS                         | HTTPS 网络连接                                       | 显示证书域名  |
+| nghttpx + TLS                       | HTTPS 网络连接                                       | 显示证书域名  |
+| kcptun                              | UDP 业务                                             | 显示服务器 IP |
 
-* 注：由于这份资料真假未知，仅做分享，请勿有不必要的恐慌。*
+*注：由于这份资料真假未知，仅做分享，请勿有不必要的恐慌。*
 
 ## 新生代
 
@@ -210,12 +219,12 @@ Shadowsocks 一键安装脚本先驱秋水逸冰在 twitter 上发推：
 
 Surge，虽然出生于 iOS 平台，但其思路打破了之前 Shadowsocks 圈内的桎梏，再次促进了 Shadowsocks 生态的发展。
 
-最初的 Surge 定位于网络调试工具，作者本人写了一个 Shadowsocks module 实现了 Shadowsocks，也许作者本人的想法并不是翻墙，所以该 module 从开始就是一个黑箱，且长时间没有支持 V2Ray 等新型协议，直至 2019 年和 2020 年才分别加入了对 V2Ray 与 Trojan 的支持。另外，Surge 于 2019 年起添加了对其自研闭源协议 Snell 的支持，并于 2020 年发布了该协议的 V2Ray 版本。无心栽柳柳成荫，Surge 可以在 iOS 端实现全局代理，并且自开始稳定性就非常好，68 的售价并没有挡住人们热情的购买力，但此时的 Surge 仍然是相对小众的。
+最初的 Surge 定位于网络调试工具，作者本人写了一个 Shadowsocks module 实现了 Shadowsocks，也许作者本人的想法并不是翻墙，所以该 module 从开始就是一个黑箱，且长时间没有支持 V2Ray 等新型协议，直至 2019 年和 2020 年才分别加入了对 V2Ray 与 Trojan 的支持。另外，Surge 于 2019 年起添加了对其自研闭源协议 Snell 的支持，并于 2020 年发布了该协议的 V2Ray 版本。无心栽柳柳成荫，Surge 可以在 iOS 端实现全局代理，并且自开始稳定性就非常好，￥68 的售价并没有挡住人们热情的购买力，但此时的 Surge 仍然是相对小众的。
 
 Surge 的模式非常具有开创性：
 
-  1. 以文本 config 设置软件，非常的 linux；
-  2. 因为 Surge 定位为网络调试工具，因为配置文件中可以单独设置面对某网址或某 IP 时，网络对其的响应，主要包含 proxy，direct，reject 3 种核心模式，同时，Surge 可以观测到网络的连接情况，实现重发等操作，实现抓包。于是，一个网络调试软件，得益于优异的思路，经由网友们的一番探索，使其可以指定代理地址，屏蔽广告，解析视频地址，抓取网络流量，堪称完美。
+1. 以文本 config 设置软件，非常的 Linux；
+2. 因为 Surge 定位为网络调试工具，因为配置文件中可以单独设置面对某网址或某 IP 时，网络对其的响应，主要包含 proxy、direct、reject 3 种核心模式，同时，Surge 可以观测到网络的连接情况，实现重发等操作，实现抓包。于是，一个网络调试软件，得益于优异的思路，经由网友们的一番探索，使其可以指定代理地址，屏蔽广告，解析视频地址，抓取网络流量，堪称完美。
 
 ![](image/surge1.png)
 
@@ -223,23 +232,23 @@ Surge 的模式非常具有开创性：
 
 Surge 固然好，但是其开发者 Yachen Liu 却着实是一个富有争议的人，整理的 Surge 时间线如下：
 
-- 2015 年 10 月 26 日 Surge 以 68 元的售价上架 App Store；
+* 2015 年 10 月 26 日 Surge 以 68 元的售价上架 App Store。
 
-- 2015 年 11 月 29 日 Yachen Liu 自称被喝茶（注：无法被证实）；
+* 2015 年 11 月 29 日 Yachen Liu 自称被喝茶（注：无法被证实）。
 
-- 2015 年 12 月 4 日 ，Surge App Store ** 全区下架 **，之后又以 648 元的高价短期上线，作者解释为方便已购买用户更新；
+* 2015 年 12 月 4 日 ，Surge App Store **全区下架**，之后又以 648 元的高价短期上线，作者解释为方便已购买用户更新。
 
-- 2016 年 3 月，Surge iOS 2.0 版本发布，承诺 648 元 ** 永不降价 **，同时启用反盗版策略，180 天内仅能激活十台设备；
+* 2016 年 3 月，Surge iOS 2.0 版本发布，承诺 648 元 **永不降价**，同时启用反盗版策略，180 天内仅能激活十台设备。
 
-- 2016 年 8 月，Surge Mac 2.0 版本发布，iOS 版本价格调整为 328 元，作者解释 648 元为 Mac 与 iOS 双版本价格，价格调整是售卖策略发生变化；
+* 2016 年 8 月，Surge Mac 2.0 版本发布，iOS 版本价格调整为 328 元，作者解释 648 元为 Mac 与 iOS 双版本价格，价格调整是售卖策略发生变化。
 
-- 2017 年 5 月，Surge 限时 8 折；
+* 2017 年 5 月，Surge 限时 8 折。
 
-- 2018 年 1 月，iOS Surge 3 发布，根据老用户购买时间提供免费升级和优惠升级，同时提升反盗版策略，仅能激活 3 台设备；
+* 2018 年 1 月，iOS Surge 3 发布，根据老用户购买时间提供免费升级和优惠升级，同时提升反盗版策略，仅能激活 3 台设备。
 
-- 2018 年 10 月，作者发推表示
+* 2018 年 10 月，作者发推表示：
 
-  > 计划给 Surge iOS 加一个新功能，可以选择将自己的授权与 iCloud 账号绑定，绑定后最多可激活 6 个设备，但是仅可以在自己的 iCloud 登录的设备上使用。 
+> 计划给 Surge iOS 加一个新功能，可以选择将自己的授权与 iCloud 账号绑定，绑定后最多可激活 6 个设备，但是仅可以在自己的 iCloud 登录的设备上使用。
 
 作者确实是网络技术大牛，截至目前，Surge 仍然是 iOS 端最优秀的 Shadowsocks 客户端，但是其营销策略极富争议性，喝茶事件至今无法证实，且之后全区下架客户端也毫无道理，之后长期上架 App Store 也不能很好的自圆其说，因此被称为喝茶营销。
 
@@ -255,11 +264,11 @@ Surge 下架上架来回折腾的时候，不少开发者也看到了机遇，Sh
 
 ![shadowrocket](image/shadowrocket.png)
 
-现在的小火箭可以说已经尽善尽美了，作者更新的频率大大降低，但是仅仅 18 元的售价显得非常的亲民。
+现在的小火箭可以说已经尽善尽美了，作者更新的频率大大降低，但仅仅 ￥18 元的售价显得非常的亲民。
 
 #### Others
 
-iOS 上还有 A.BIG.T，Potatso 等 VPN 软件，16 年，17 年与小火箭战的难舍难分，无奈后劲不足，现在大概是明日黄花了。
+iOS 上还有 A.BIG.T 和 Potatso 等 VPN 软件，16 年、17 年与小火箭战的难舍难分，无奈后劲不足，现在大概是明日黄花了。
 
 [Quantumult](https://itunes.apple.com/us/app/quantumult/id1252015438#?platform=iphone) 是新近崛起的一款代理软件，$4.99 的售价可以实现 Surge 的大部分功能，支持多种协议，相较于小火箭又多出了抓包功能，测试规则更方便，同时，Quantumult 扩展了规则中的屏蔽性能，使得屏蔽广告更有针对性。
 
@@ -275,9 +284,9 @@ Android 理应有更多的选择，然而事实却完全相反，在 Android 上
 
 Postern 是在 Android 上最接近于 Surge 模式的软件，其可以兼容 Surge 规则，直接将 Surge 的配置文件导入即可使用，整体功能也算中规中矩，但是 Postern 的 UI 相对简陋，作者对此的解释是：
 
-> 很多 Postern 用户抱怨软件 UI 的问题，确实 UI 比较简陋。主要是 Postern 是从 Linux 下一堆 C 代码演化过来的，刚开始并没有任何 UI 只有命令行，开发者只求运行稳定快速。我也希望能强化 UI，不过无奈主业实在太忙，最近更是几乎没有时间维护。仅就今后尽量改进吧。 
+> 很多 Postern 用户抱怨软件 UI 的问题，确实 UI 比较简陋。主要是 Postern 是从 Linux 下一堆 C 代码演化过来的，刚开始并没有任何 UI 只有命令行，开发者只求运行稳定快速。我也希望能强化 UI，不过无奈主业实在太忙，最近更是几乎没有时间维护。仅就今后尽量改进吧。
 
-截止目前（2019/03/12），Postern Android 版仍未支持混淆，ShadowsocksR 之后兴起的新型加密格式也未获得支持，如果有相关的需求可以尝试，对于一般人来说也许 shadowsocks 更为合适些。Postern 可以在 Google Play Store 获取，同时 Postern 的 GitHub 中包含了 [说明手册](https://github.com/postern-overwal/postern-stuff)，从 GitHub 的文件来看，作者同时也放出了 Mac 版的安装包，在 iOS 美区也可以购买 iOS 版。
+截止目前（2019/03/12），Postern Android 版仍未支持混淆，ShadowsocksR 之后兴起的新型加密格式也未获得支持，如果有相关的需求可以尝试，对于一般人来说也许 Shadowsocks 更为合适些。Postern 可以在 Google Play Store 获取，同时 Postern 的 GitHub 中包含了 [说明手册](https://github.com/postern-overwal/postern-stuff)，从 GitHub 的文件来看，作者同时也放出了 Mac 版的安装包，在 iOS 美区也可以购买 iOS 版。
 
 ![postern](image/postern.png)
 
@@ -303,7 +312,7 @@ Postern 是在 Android 上最接近于 Surge 模式的软件，其可以兼容 S
 
 服务器建议安装带有 BBR 技术的 Linux 系统，TCP BBR 拥塞控制算法由 Google 开发，并提交到了 Linux 内核，从 4.9 开始，Linux 内核已经用上了该算法。根据以往的传统，Google 总是先在自家的生产环境上线运用后，才会将代码开源，此次也不例外。根据实地测试，在部署了最新版内核并开启了 TCP BBR 的机器上，网速甚至可以提升好几个数量级。
 
-搬瓦工的机器可以在控制面板 ---> install new os ---> centos-7-x86_64-bbr，快速更换系统，注意备份服务器上的数据。
+搬瓦工的机器可以在控制面板 -> install new os -> centos-7-x86_64-bbr，快速更换系统，注意备份服务器上的数据。
 
 ![](image/newOS.png)
 
@@ -316,7 +325,7 @@ Postern 是在 Android 上最接近于 Surge 模式的软件，其可以兼容 S
 1. Shadowsocks-go：二进制编译，轻量，快速
 2. Shadowsocks-python：无功无过，也是最原始的版本，近年来更新速度略慢
 3. Shadowsocks-libev：一直处于更新之中，最大的特点是支持 obfs 混淆
-4. ShadowsocksR：从作者到产品都极负争议性，obfs 混淆模式开创者，但是前一段时间 ShadowsocksR 服务器普遍遭到 GFW 的封杀. 
+4. ShadowsocksR：从作者到产品都极负争议性，obfs 混淆模式开创者，但是前一段时间 ShadowsocksR 服务器普遍遭到 GFW 的封杀
 
 现阶段为了能在安全与速度之间取得平衡，我个人更加推荐使用 Shadowsocks-libev + obfs 混淆。
 
@@ -332,21 +341,21 @@ obfs 混淆最大的作用是对 Shadowsocks 流量进行伪装，在不添加 o
 
 安装图省心推荐秋水逸冰的 [一键安装脚本](https://teddysun.com/357.html)
 
-** 请注意，秋水逸冰已经宣布放弃继续维护该脚本，因此该脚本可能随时会失效 **
+**请注意，秋水逸冰已经宣布放弃继续维护该脚本，因此该脚本可能随时会失效**
 
 1. 使用 root 用户 ssh 登录
 
-   ```shell
-   wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
-   chmod +x shadowsocks-all.sh
-   ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
-   ```
+```
+$ wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+chmod +x shadowsocks-all.sh
+# ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
+```
 
 2. 跟随提示选择相对应的模式即可
 
     1. 加密方式推荐 **chacha20-itef-poly1305**
     2. 端口可以尽量设置高一点，避免 443 和 1080 等常用端口
-    3. ** 安装 simple-obfs，选择 HTTP 模式 **
+    3. **安装 simple-obfs，选择 HTTP 模式**
 
     安装成功后会有如下提示:
 
@@ -372,17 +381,34 @@ obfs 混淆最大的作用是对 Shadowsocks 流量进行伪装，在不添加 o
 
 使用 root 用户登录
 
-```shell
-./shadowsocks-all.sh uninstall
+```
+# ./shadowsocks-all.sh uninstall
 ```
 
 4. 常用命令
 
-```shell
-启动：/etc/init.d/shadowsocks-libev start
-停止：/etc/init.d/shadowsocks-libev stop
-重启：/etc/init.d/shadowsocks-libev restart
-查看状态：/etc/init.d/shadowsocks-libev status
+启动：
+
+```
+# /etc/init.d/shadowsocks-libev start
+```
+
+停止：
+
+```
+# /etc/init.d/shadowsocks-libev stop
+```
+
+重启：
+
+```
+# /etc/init.d/shadowsocks-libev restart
+```
+
+查看状态：
+
+```
+# /etc/init.d/shadowsocks-libev status
 ```
 
 ## Shadowsocks 客户端
@@ -393,8 +419,8 @@ Shadowsocks 客户端已经全平台覆盖了，GitHub 上有专门的开源客�
 
 #### 下载地址
 
-- [Win Shadowsocks 客户端下载地址](https://github.com/shadowsocks/shadowsocks-windows/releases)
-- [Shadowsocks obfs-local 插件下载地址](https://github.com/shadowsocks/simple-obfs/releases)
+* [Windows 的 Shadowsocks 客户端下载地址](https://github.com/shadowsocks/shadowsocks-windows/releases)
+* [Shadowsocks obfs-local 插件下载地址](https://github.com/shadowsocks/simple-obfs/releases)
 
 #### 本地配置
 
@@ -406,27 +432,23 @@ obfs 可以直接在 Shadowsocks 的服务器编辑页面修改参数
 
 ![](image/Snipaste_2018-09-12_09-24-32.png)
 
-插件选项为 **obfs=http;obfs-host=www.bing.com**，实际上可以将 www.bing.com 更换为任意的一个网址，只要不是被 GFW 封杀的就可以，推荐像腾讯视频，优酷，bing 这种流量较大的网站，~~如果填写是 Google 或者 YouTube，活着不好么······~~
-
-
+插件选项为 **obfs=http;obfs-host=www.bing.com**，实际上可以将 www.bing.com 更换为任意的一个网址，只要不是被 GFW 封杀的就可以，推荐像腾讯视频，优酷，Bing 这种流量较大的网站，~~如果填写是 Google 或者 YouTube，活着不好么······~~
 
 ### macOS
 
 ~~macOS 上的 Shadowsocks 客户端目前似乎还是不支持 obfs 混淆。~~
 
-2018/10/06 更新
-
 #### Shadowsocks-NG
 
-GitHub 上存在好几种 Mac 客户端，使用最广的是 Shadowsocks-NG，目前的版本中已经支持 obfs 混淆，并且已经直接集成于客户端之中，无需额外下载，按照 windows 的设置填写参数即可。
+GitHub 上存在好几种 Mac 客户端，使用最广的是 Shadowsocks-NG，目前的版本中已经支持 obfs 混淆，并且已经直接集成于客户端之中，无需额外下载，按照 Windows 的设置填写参数即可。
 
 ![](image/macOsNG.png)
 
-- [Shadowsocks-NG 下载地址](https://github.com/shadowsocks/ShadowsocksX-NG/releases)
+* [Shadowsocks-NG 下载地址](https://github.com/shadowsocks/ShadowsocksX-NG/releases)
 
 #### ClashX
 
-最近出现了一个新的类 Surge 软件，ClashX，目前还在快速迭代期之中，兼容 Surge 的 config 文件，基本上对其稍作修改便可以导入 ClashX 中使用。可以去官方 [Telegram 群](t.me/clash_discuss) 参与讨论
+最近出现了一个新的类 Surge 软件，ClashX，目前还在快速迭代期之中，兼容 Surge 的 config 文件，基本上对其稍作修改便可以导入 ClashX 中使用。可以去官方 [Telegram 群组](t.me/clash_discuss) 参与讨论
 
 类 Surge 软件的核心都在于 config 文件，在 Shadowsocks 网络分流的基础上，对不同的流量产生不同的行为，可以实现指定网址代理，广告屏蔽等效果，自由度更高。
 
@@ -436,7 +458,7 @@ GitHub 上存在好几种 Mac 客户端，使用最广的是 Shadowsocks-NG，�
 
 #### Surge
 
-支持 obfs 混淆，在 3.0 版本中加入了全新的 rule-set 模式，config 的管理从本地可以完全移至云端，不同的 rule-set 对应不同的应用规则，更容易管理，只可惜没钱截图😂
+支持 obfs 混淆，在 3.0 版本中加入了全新的 rule-set 模式，config 的管理从本地可以完全移至云端，不同的 rule-set 对应不同的应用规则，更容易管理，只可惜没钱截图。
 
 ### iOS
 
@@ -468,6 +490,6 @@ shadowrocket 在服务器的编辑页面中即可设置混淆
 
 ![](image/ass.png)
 
-#### Postern 
+#### Postern
 
 Postern 目前尚不支持混淆模式。

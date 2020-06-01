@@ -1,3 +1,8 @@
+DOMAIN-KEYWORD,goodreads
+DOMAIN-SUFFIX,ggpht.com
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN-SUFFIX,zhihuren.space
+DOMAIN-SUFFIX,matters.news
 DOMAIN-KEYWORD,tu-berlin
 DOMAIN-SUFFIX,quora.com
 DOMAIN-KEYWORD,justmysocks
@@ -40,7 +45,7 @@ DOMAIN-SUFFIX,slideshare.net
 # R18
 DOMAIN-SUFFIX,javbus.com
 DOMAIN-KEYWORD,avgle
-DOMAIN-KEYWORD,acg18,
+DOMAIN-KEYWORD,acg18
 DOMAIN-SUFFIX,pornhub.com
 DOMAIN-KEYWORD,pron.tv
 DOMAIN-KEYWORD,phncdn
@@ -54,6 +59,7 @@ DOMAIN,www.amazon.com
 DOMAIN-SUFFIX,amazon.co.uk
 DOMAIN-SUFFIX,amazonaws.com
 DOMAIN-SUFFIX,amazon.co.jp
+# Others
 DOMAIN,mathstud.io
 DOMAIN,time.com
 # Netfilx

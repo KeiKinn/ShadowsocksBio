@@ -452,7 +452,7 @@ GitHub上存在好几种Mac客户端，使用最广的是Shadowsocks-NG，目前
 
 支持obfs混淆，在3.0版本中加入了全新的rule-set模式，config的管理从本地可以完全移至云端，不同的rule-set对应不同的应用规则，更容易管理，~~只可惜没钱截图😂~~
 
-![](image/Surge_mac.png)
+![](image/Surge_Mac.png)
 
 ### iOS
 

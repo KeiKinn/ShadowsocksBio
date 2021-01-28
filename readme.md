@@ -273,17 +273,41 @@ iOS上还有A.BIG.T，Potatso等VPN软件，16年，17年与小火箭战的难�
 
 #### Android
 
-Android 理应有更多的选择，然而事实却完全相反，在 Android 上实现分流代理的软件反倒非常的稀少，且质量良莠不齐。
+Android 平台因为其自由开放的特性，使得各类 VPN 应用均能找到对应的用户群，因此 SS 客户端的发展最初比较缓慢，较为完善的基础客户端仅有 Shadowsocks，但是其仅提供了分流代理功能，并不能实现广告拦截等功能。随着时间的推移，越来越多的开发者参与到开源社区的建设中，也伴随着机场托管，订阅的发展，Android 也涌现出越来越多的优秀应用。只不过受限于个人精力，并没有对更多的应用保持关注。
 
-##### Postern
+##### Clash for Android
+
+Clash for Android 是 Android 平台上的一款开源 Clash 客户端，其界面简洁，美观，支持机场订阅，托管，经过多次的迭代之后，基础功能已经相当的完善，性能表现稳定，能够满足大多数人的日常使用。
+
+项目地址：[GitHub](https://github.com/Kr328/ClashForAndroid)
+下载地址：[GitHub](https://github.com/Kr328/ClashForAndroid/releases) | [Google Play](https://play.google.com/store/apps/details?id=com.github.kr328.clash)
+
+![Clash for Android](image/CfA.png)
+
+##### Postern (个人并不推荐)
+
+**2021 年 1 月更新：Android 上已经有不少的优秀应用了，考虑到 Postern 在 Google Play 上最近的一次更新是 2018 年 10 月 7 日，无论是功能，用户体验，稳定性，个人对该 APP 不做推荐，文章中仅作为记录。**
 
 Postern是在 Android 上最接近于 Surge 模式的软件，其可以兼容 Surge 规则，直接将 Surge 的配置文件导入即可使用，整体功能也算中规中矩，但是 Postern 的 UI 相对简陋，作者对此的解释是：
 
 > 很多Postern用户抱怨软件UI的问题，确实UI比较简陋。主要是Postern是从Linux下一堆C代码演化过来的，刚开始并没有任何UI只有命令行，开发者只求运行稳定快速。我也希望能强化UI，不过无奈主业实在太忙，最近更是几乎没有时间维护。仅就今后尽量改进吧。 
 
-截止目前（2019/03/12），Postern Android 版仍未支持混淆，SSR 之后兴起的新型加密格式也未获得支持，如果有相关的需求可以尝试，对于一般人来说也许 shadowsocks 更为合适些。Postern 可以在 Google Play Store 获取，同时 Postern 的 Github 中包含了[说明手册](https://github.com/postern-overwal/postern-stuff)，从 Github 的文件来看，作者同时也放出了 Mac 版的安装包，在 iOS 美区也可以购买 iOS 版。
+截止目前（2019/03/12），Postern Android 版仍未支持混淆，SSR 之后兴起的新型加密格式也未获得支持，如果有相关的需求可以尝试，对于一般人来说也许 shadowsocks 更为合适些。Postern 可以在 Google Play Store 获取，同时 Postern 的 Github 中包含了[说明手册](https://github.com/postern-overwal/postern-stuff)，从 Github 的文件来看，作者同时也放出了 Mac 版的安装包(个人并不推荐)，在 iOS 美区也可以购买 iOS 版 (个人并不推荐)。
 
 ![postern](image/postern.png)
+
+##### 评论
+根据 [Issue #7](https://github.com/KeiKinn/ShadowsocksBio/issues/7)，@Mosney 根据自己的经验，提出了多个平台上的新兴 App 与应用，现做摘录如下：
+> Android：
+之前在hockyapp上公测的Surfboard，现在也已经在play商店发布1.0版本，唯一的劣势可能就是配置文件独树一帜。
+Clash for Android也已经注册play商店超前体验，UI很漂亮，clash内核提供更广泛的兼容性。
+Android还有一些我没用过的客户端，ClashA等。
+
+> Windows：
+目前个人感觉Clash for Windows日臻完善。
+
+>Others：
+另外目前x86机器做路由实现网关透明代理似乎也越来越流行，其中大部分是用的现有的ss+OpenWrt luci插件作为前端方案，还有少部分是用的clash+luci界面，据我所了解目前也有几个开发者在维护适用于OpenWrt的软件包或分支。
 
 #### 总结
 

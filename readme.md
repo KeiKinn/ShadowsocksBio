@@ -211,7 +211,7 @@ SS 一键安装脚本先驱秋水逸冰在 twitter 上发推：
 
 Surge 出生于 iOS 平台，带着枷锁跳舞，其思路打破了之前 SS 圈内的桎梏，再次促进了 SS 代理软件生态的发展。
 
-最初的 Surge 定位于网络调试工具，作者本人写了一个 SS module 实现了 SS，也许作者本人的想法并不是翻墙，所以该 module 从开始就是一个黑箱，且长时间没有支持 V2Ray 等新型协议，直至 2019 年和 2020 年才分别加入了对 V2Ray 与 Trojan 的支持。另外，Surge 于 2019 年起添加了对其自研闭源协议 Snell 的支持，并于2020年发布了该协议的 v2 版本。无心栽柳柳成荫，通过使用 Network Extension 建立 VPN 通道，Surge 可以接管 iOS 设备网络，实现全局代理，网络分流，并且 Surge 的稳定性非常好，68 的售价并没有挡住人们热情的购买力，网络上逐渐开始出现关于 Surge 的讨论，使用教程乃至付费共享，此时的 Surge 仍处于一个相对小众的时期。
+最初的 Surge 定位于网络调试工具，作者本人写了一个 SS module 实现了 SS，也许作者本人的想法并不是翻墙，所以该 module 从开始就是一个黑箱，且长时间没有支持 V2Ray 等新型协议，直至 2019 年和 2020 年才分别加入了对 V2Ray 与 Trojan 的支持。另外，Surge 于 2019 年起添加了对其自研闭源协议 Snell 的支持，并于2020年发布了该协议的 v2 版本。无心栽柳柳成荫，通过使用 Network Extension 建立 VPN 通道，Surge 可以接管 iOS 设备网络，实现全局代理，网络分流，并且 Surge 的稳定性非常好，68 的售价并没有挡住人们热情的购买力，网络上逐渐开始出现关于 Surge 的讨论，使用教程乃至付费共享。
 
 无论站在当时还是现在的角度来看，Surge 的模式非常具有开创性：
 
@@ -280,6 +280,7 @@ Android 平台因为其自由开放的特性，使得各类 VPN 应用均能找�
 Clash for Android 是 Android 平台上的一款开源 Clash 客户端，其界面简洁，美观，支持机场订阅，托管，经过多次的迭代之后，基础功能已经相当的完善，性能表现稳定，能够满足大多数人的日常使用。
 
 项目地址：[GitHub](https://github.com/Kr328/ClashForAndroid)
+
 下载地址：[GitHub](https://github.com/Kr328/ClashForAndroid/releases) | [Google Play](https://play.google.com/store/apps/details?id=com.github.kr328.clash)
 
 ![Clash for Android](image/CfA.png)

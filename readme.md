@@ -30,7 +30,7 @@ Thank you.
     + [Shadowrocket --- 小火箭](#Shadowrocket-----小火箭)
     + [Others](#Others)
     + [Android](#Android)
-      - [Clash for Android](#Clash for Android)
+      - [Clash for Android](#Clash-for-Android)
       - [Postern](#Postern)
   * [总结](#总结)
   * [后记](#后记)

@@ -101,7 +101,7 @@ I believe you guys will make great stuff with Network Extensions.
 至此，Shadowsocks 原作者退出。
 
 #### 一些话
-clowwindy 的遭遇却退了热情的开发者，但后续工作并未停止，前前后后也着实发生了很多的事情，前因后果在此不计。ShadowsocksR 的作者 breakwa11 是一个极富争议性的人，她接手了后续 Shadowsocks的开发工作，却违反开源协议封闭源代码，同时发布的过程中暗示自己是原作者，在 [shadosocks-windows/IShadowsocksue108](https://github.com/shadowsocks/shadowsocks-windows/iShadowsocksues/293#iShadowsocksuecomment-132253168) 中 clowwindy 做出了一些回应：
+clowwindy 的遭遇却退了热情的开发者，但后续工作并未停止，前前后后也着实发生了很多的事情，前因后果在此不计。ShadowsocksR 的作者 breakwa11 是一个极富争议性的人，她接手了后续 Shadowsocks的开发工作，却违反开源协议封闭源代码，同时发布的过程中暗示自己是原作者，在 [shadosocks-windows/Issue108](https://github.com/shadowsocks/shadowsocks-windows/issues/293#issuecomment-132253168) 中 clowwindy 做出了一些回应：
 >那是自然的咯。这边加了什么功能，它（SSR）马上扒过去合并了。它那边加了什么却不会贡献出来给其他人用，久而久之，不就是它那边功能更多了吗。
 
 >一直以来我什么都没说是因为我对他还有点希望，所以得给他一点面子不是。一开始我还只是纳闷他为什么不发 pull request，过了一段时间我才明白，这个世界上也有这一类的人。不尊重 GPL 就算了，把作者名字换成自己的，还在主页上加上官方的字样。为什么我们这边反而不说官方呢？因为我希望这个项目是没有官方的，人人都是贡献者。想不到这个社会人人都围着官转，人人都巴不得当官 。
@@ -153,7 +153,7 @@ clowwindy 的遭遇与随后的退出，其实在暗示着 GFW 的成长，它�
 
 2017年10月，伴随着十九大的开幕，大量线路被封杀，尤其以 SSR 为甚，各大机场与 tg 群一片哀嚎，所幸大会闭幕后不少 IP 被解封，不清楚具体的比例。
 
-2018年1月，以及接下来的两会期间，执行了更大规模的 IP 封杀，涉及范围更广，基于各种算法的翻墙方法均有涉及，Shadowsocks 的 IShadowsocksues 中有用户反映刚刚搭好十几分钟即被封杀。
+2018年1月，以及接下来的两会期间，执行了更大规模的 IP 封杀，涉及范围更广，基于各种算法的翻墙方法均有涉及，Shadowsocks 的 Issues 中有用户反映刚刚搭好十几分钟即被封杀。
 
 2018年9月30日，公安部下发[通知](http://www.mps.gov.cn/n2254314/n2254409/n4904353/c6263180/content.html)
 
@@ -303,7 +303,7 @@ Postern是在 Android 上最接近于 Surge 模式的软件，其可以兼容 Su
 ![postern](image/postern.png)
 
 ##### 评论
-根据 [IShadowsocksue #7](https://github.com/KeiKinn/ShadowsocksBio/iShadowsocksues/7)，@Mosney 根据自己的经验，提出了多个平台上的新兴 App 与应用，现做摘录如下：
+根据 [Issue #7](https://github.com/KeiKinn/ShadowsocksBio/issues/7)，@Mosney 根据自己的经验，提出了多个平台上的新兴 App 与应用，现做摘录如下：
 > Android：
 之前在hockyapp上公测的Surfboard，现在也已经在play商店发布1.0版本，唯一的劣势可能就是配置文件独树一帜。
 Clash for Android也已经注册play商店超前体验，UI很漂亮，clash内核提供更广泛的兼容性。
@@ -376,7 +376,7 @@ obfs 混淆最大的作用是对 Shadowsocks 流量进行伪装, 在不添加obf
 
 **请注意，秋水逸冰已经宣布放弃继续维护该脚本，因此该脚本可能随时会失效**
 
-1. 使用root用户Shadowsocksh登录
+1. 使用 root 用户 SSH 登录
 
    ```shell
    wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
@@ -396,11 +396,11 @@ obfs 混淆最大的作用是对 Shadowsocks 流量进行伪装, 在不添加obf
    Congratulations, your_shadowsocks_version install completed!
    Your Server IP        :your_server_ip
    Your Server Port      :your_server_port
-   Your PaShadowsocksword         :your_paShadowsocksword
+   Your Password         :your_password
    Your Encryption Method:your_encryption_method
    
    Your QR Code: (For Shadowsocks Windows, OSX, Android and iOS clients)
-    Shadowsocks://your_encryption_method:your_paShadowsocksword@your_server_ip:your_server_port
+   ss://your_encryption_method:your_password@your_server_ip:your_server_port
    Your QR Code has been saved as a PNG file path:
     your_path.png
    
@@ -470,7 +470,7 @@ GitHub上存在好几种Mac客户端，使用最广的是Shadowsocks-NG，目前
 
 #### ClashX
 
-最近出现了一个新的类Surge软件，ClashX，目前还在快速迭代期之中，兼容 Surge 的 config 文件，基本上对其稍作修改便可以导入 ClashX 中使用。可以去官方[ Telegram 群](t.me/clash_discuShadowsocks)参与讨论
+最近出现了一个新的类Surge软件，ClashX，目前还在快速迭代期之中，兼容 Surge 的 config 文件，基本上对其稍作修改便可以导入 ClashX 中使用。可以去官方[ Telegram 群](t.me/clash_discuss)参与讨论
 
 类Surge软件的核心都在于config文件，在Shadowsocks网络分流的基础上，对不同的流量产生不同的行为，可以实现指定网址代理，广告屏蔽等效果，自由度更高。
 
@@ -512,7 +512,7 @@ shadowrocket在服务器的编辑页面中即可设置混淆
 
 也可以前往 [Shadowsocks-Android](https://github.com/shadowsocks/shadowsocks-android/releases) 的 GitHub 仓库下载。
 
-![](image/aShadowsocks.png)
+![](image/ass.png)
 
 #### Postern 
 

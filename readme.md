@@ -75,7 +75,7 @@ Thank you.
 ## Shadowsocks
 ### 一些历史事件
 2012年4月22日，V2EX 用户 clowwindy 分享了一个自己自用一年多的翻墙工具：**Shadowsocks**
-![](image/cwpostShadowsocks.png)
+![](image/cwpostss.png)
 
 在日常中，当我们谈到 Shadowsocks (Shadowsocks)，实际上说的是围绕 Shadowsocks 所建立起来的一套完整的翻墙组件，其中包括了 Shadowsocks 协议，Shadowsocks 客户端，但本质上是 Shadowsocks 一套加密协议，被加密后的网络数据隐匿了目标地址与内容特征，使得 GFW 无法对我们期望的流量进行污染或者拦截，从而实现网络自由。传统的 VPN 技术的主要目的是保证数据安全，降低数据泄漏的风险，因此，当开启 VPN 之后，所有的流量都会通过 VPN 通道进行传输，这意味着无需代理的网络流量被转发到远程的 VPN 服务器，即使个人建立了 VPN 通道，也难以避免网络访问效率上的下降，同时也难以避免个别的版权内容无法播放的情况。
 
@@ -99,7 +99,7 @@ I believe you guys will make great stuff with Network Extensions.
 
 空气中弥漫着不寻常。
 
-**2015年8月21日** 网络上开始传出 clowwindy 被请去喝茶的消息，稍后 clowwindy 在 shadowsocks-windows 的 #305 iShadowsocksue 下回复道
+**2015年8月21日** 网络上开始传出 clowwindy 被请去喝茶的消息，稍后 clowwindy 在 shadowsocks-windows 的 #305 issue 下回复道
 >I was invited for some tea yesterday. I won’t be able to continue developing this project.
 
 同时他也开启了 twitter 的隐私保护功能，除已关注者外，其他人无法查看他的动态；

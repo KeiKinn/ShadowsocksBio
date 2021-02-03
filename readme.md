@@ -2,6 +2,13 @@
 ![AUTHOR](https://img.shields.io/badge/AUTHOR-JingX-green.svg)
 ![LICENSE](https://img.shields.io/badge/LICENSE-CC--BY--SA--4.0-9cf.svg)
 
+** Call for help**
+I want to translate the article into english, but my english and time limit me. 
+
+I will be appreciate if you can make your contribution on this project if you have interests.
+
+Thank you.
+
 > 时间会遗忘的。
   * [前言](#前言)
     + [经典思路](#经典思路)

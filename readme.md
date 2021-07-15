@@ -95,14 +95,15 @@ Thank you.
 >I hope one day I’ll live in a country where I have freedom to write any code I like without fearing.
 >
 >I believe you guys will make great stuff with Network Extensions.
-
+>
 >Cheers!
 
-当晚，clowwindy 把他所维护的几个 shadowsocks 代码仓库内的 Isuesses 面板全部关闭，所有帮助信息全部删除，并将所有的描述都改成了 Something happened。于此同时，他还清空了这些仓库 / 组织的 membership，或者将所有成员全部转入隐私状态，不对外公开。
+当晚，clowwindy 把他所维护的几个 shadowsocks 代码仓库内的 Isuesses 面板全部关闭，所有帮助信息全部删除，并将所有的描述都改成了 **Something happened**。于此同时，他还清空了这些仓库 / 组织的 membership，或者将所有成员全部转入隐私状态，不对外公开。
 
 空气中弥漫着不寻常。
 
 **2015年8月21日** 网络上开始传出 clowwindy 被请去喝茶的消息，稍后 clowwindy 在 shadowsocks-windows 的 #305 issue 下回复道
+
 >I was invited for some tea yesterday. I won’t be able to continue developing this project.
 
 同时他也开启了 twitter 的隐私保护功能，除已关注者外，其他人无法查看他的动态；
@@ -132,7 +133,7 @@ ShadowsocksR 的作者 breakwa11 是一个极富争议性的人，她接手了�
 
 值得反思。
 
-#### SSR之死
+#### SSR 之死
 
 争议始终是存在着的，但是这也未曾阻挡 SSR 前进发展的步伐，越来越多的人开始转向 SSR，SS 逐步落入下风，但是也有一批拥促。平静的水面下隐藏着汹涌的暗流，爆发的那一刻已然迟已，开发者 breakwa11 的遭遇不论真假，同样令人胆寒
 
@@ -148,16 +149,17 @@ ShadowsocksR 的作者 breakwa11 是一个极富争议性的人，她接手了�
 
 ##  传承
 
-clowwindy  与 breakwa11 的遭遇与随后的退出，其实在暗示着 GFW 的成长，它不仅仅是技术上的博弈，它的概念开始扩展至更广泛的领域，技术永远都是有漏洞的，但与此同时，开发者也是。奔涌的潮水会退回去，但下一次，下一次，它依然会积蓄着力量汹涌而来。
+clowwindy  与 breakwa11 的遭遇与随后的退出，其实在暗示着 GFW 的成长，它不仅仅是技术上的博弈，它的概念开始扩展至更广泛的领域，技术永远都是有漏洞的，这些漏洞可以不断被弥补，但开发者自身的漏洞却是很难去修改的，不仅需要解决问题，同时也要解决制造问题的源头。
 
+得益于 clowwindy 最初开源 Shadowsocks 的决定，大量的 fork 使得 Shadowsocks 依然在更新之中，从 GitHub 现有结果来看，各个平台（甚至是路由器）的 Shadowsocks 仍然不断的在更新，在提交 Issue，也有大功能更新，每一滴微小的力量都推动着项目的前进，只是前途在何处仍然是未知数。
 
-得益于 clowwindy 最初开源 Shadowsocks 的决定，大量的 fork 使得 Shadowsocks 依然在更新之中，从 GitHub 现有结果来看，各个平台（甚至是路由器）的 Shadowsocks 仍然不断的在更新，在提交 IShadowsocksue，也有大功能更新，每一滴微小的力量都推动着项目的前进，只是前途在何处仍然是未知数。
+奔涌的潮水会退回去，但下一次，下一次，它依然会积蓄着力量汹涌而来，真是我所抱有的美好期待，然而自从2018年开始，实际上各类协议的开发工作事实上陷入了瓶颈期，似乎是在与 GFW 博弈中达到了某种平衡，可以感觉到整个社区不再关注核心的加密以及特征隐藏。更多的开发者将心思放在了机场上，从某种意义上说，Shadowsocks 所引发的力量在技术层面已经进入了休眠，这无异于吃下了蓝色的药丸。
 
 ## 变数
 
 ###  收紧的手
 
-2017年7月底，中国区 App Store 多款 VPN 相关应用在无任何说明与通知的情况下，突然集体被下架，与正常下架流程不同的是，过去苹果官方下架的应用一般可以在用户的已购项目中仍然可以下载，这是对已经购买了该应用的用户权益的保障，而这次的下架直接封杀了国行 App Store 所有渠道的下载，性质显然不同于以往，苹果给出的回应是：
+2017年7月底，中国区 App Store 多款 VPN 相关应用在无任何说明与通知的情况下，突然集体被下架，且已经购买的用户在自己的已购项目中无法下载这些应用，显然苹果这次的下架直接封杀了国行 App Store 所有渠道的下载，性质显然不同于以往。苹果给出的回应是：
 
 > 我们已经收到要求，在中国移除一些不符合规范的 VPN App。这些 App 在其他市场的运营则不受影响 
 
@@ -355,7 +357,7 @@ Android还有一些我没用过的客户端，ClashA等。
 
 ## 服务器选择
 
-一般来说，VPS的虚拟化技术主流为 OpenVZ 与 KVM 架构，从各种资源以及 Shadowsocks 服务支持上，建议选择 KVM 架构的机器，以下所有的说明都是基于搬瓦工 KVM 建构的机器。
+一般来说，VPS 的虚拟化技术主流为 OpenVZ 与 KVM 架构，从各种资源以及 Shadowsocks 服务支持上，建议选择 KVM 架构的机器，以下所有的说明都是基于搬瓦工 KVM 建构的机器。
 
 ## 服务器系统
 

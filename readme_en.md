@@ -16,7 +16,9 @@ There are many ways to bypass the GFW. Here is a brief overview of some classic 
 
 ## Shadowsocks
 ## A brief history
-On April 22, 2012, a user named "clowwindy" on V2EX shared a tool that he had been using for over a year to bypass Internet censorship, called Shadowsocks.
+On April 22, 2012, a user named "clowwindy" on V2EX shared a tool that he had been using for over a year to bypass Internet censorship, called **Shadowsocks**.
+
+![](image/cwpostss.png)
 
 In essence, Shadowsocks is an encryption protocol that obscures the destination address and content of network data, making it difficult for the Great Firewall (GFW) to detect and block unwanted traffic. Unlike traditional VPN technology that routes all traffic through a VPN server, Shadowsocks uses a configuration file (PAC) to implement network routing, allowing users to specify which websites to proxy and which ones to access directly. This greatly improves browsing performance and allows users to access blocked content without relying on the VPN server's location.
 
@@ -89,3 +91,45 @@ The author of ShadowsocksR, Breakwa11, is a highly controversial figure. She too
 >现在维护这些项目已经越来越让我感到无趣。我还是努力工作，好好养家，早日肉翻吧。
 >
 >Now maintaining these projects has become more and more boring for me. It is much better for me to work hard, support my family well, and get out of here as soon as possible. ( “get out of here” is a slang term that means “to leave one’s country by physical means”)
+
+## The Sudden Death of SSR
+
+Controversy has always existed, but this has not stopped the progress of SSR. More and more people are turning to SSR, and SS is gradually falling behind, but there is also a group of supporters. Beneath the calm surface, there are turbulent undercurrents, and the moment of eruption has already passed. Whether the encounter of developer breakwa11 is true or false, it is equally chilling.
+
+On July 19, 2017, breakwa11 forwarded the Shadowsocks protocol detection results in Shenzhen on the Telegram channel "ShadowsocksR news", which was forwarded by a large number of users and caused panic.
+
+On July 27, 2017, breakwa11 was attacked by an unidentified person claiming to be "ESU.TV". They claimed that if he did not stop developing and prevent users from discussing this event, more personal privacy information would be released. Later, breakwa11 stated that he was the target of doxing, and the personal information that they made public was completely irrelevant to him. It was just information he randomly filled out at the time. To prevent they from continuing to harm unrelated people, breakwa11 decided to delete all the code on GitHub, dissolve the relevant communication groups, and stop the ShadowsocksR project. He posted the following message on Telegram:
+
+> This doxing incident has made me seriously doubt whether it is right for me to do SSR. First of all, regardless of whether the information is correct or not, from the behavior point of view, someone wants me to die, wants this project to die, and hates someone to such an extent. I know that I am very pretentious, so I have offended many people, especially recently I publicly raised the issue that Shadowsocks can be detected, which has made many people indignant and determined to get rid of me. Although from my perspective, I just hope to raise attention and promote modifications on the Shadowsocks side. This does not mean that I want Shadowsocks to die. Haven't all the issues I raised been improved, including OTA and AEAD? I also participated in the design of AEAD, you can ask Syrone Wong, and NoisyFox can confirm it. Moreover, I also participated in the modification of a part of Shadowsocks-windows. However, now that I have looked at the doxing information, it is really chilling. They even pulled out the other party's Alipay transaction records. Is this really okay? I do not want to harm another person because of my own problems. I hope to make a deal with those who oppose me. I can stop developing SSR in exchange for deleting the project and related things and never appearing again. The SSR group will be dissolved, the account will be cancelled, and the code will be deleted. For me, this project is just something I use to prove my own ideas. It is dispensable, and the production is just for interest. There is nothing to regret about throwing it away. There are so many substitutes, and I am not necessary. You always say that I am attracting fans. You really think too much. There is no need for this. If this can exchange for another person to be free from online violence, I also think it is worth it. On the contrary, if the result of doxing is still made public, then my behavior cannot save it. Then I can continue to develop SSR. But it won't be too long, probably no more than a year before I graduate. Thank you for your support over the past two years. Tonight at 12 o'clock, with the dissolution of the SSR group as a sign, if it dissolves, then I will officially say goodbye to everyone.
+
+At 12 o'clock that night, breakwa11 disbanded the Telegram group.
+
+Thus, the author of SSR withdrew.
+
+## Inheritance
+
+The encounter and subsequent exit of clowwindy and breakwa11 actually implies the growth of the GFW. It is not just a technological game, but its concept is beginning to expand into broader fields. Technology always has loopholes that can be continuously filled, but it is difficult to fix the developer's own loopholes. It not only needs to solve problems but also needs to solve the root cause of the problem.
+
+Thanks to clowwindy's decision to open source Shadowsocks, a large number of forks have kept Shadowsocks up-to-date. According to the current results on GitHub, Shadowsocks on various platforms (even routers) is still constantly being updated, with major feature updates and new issues being submitted. Every drop of small power is pushing the project forward, but its future is still unknown.
+
+The surging tide will recede, but the next time, the next time, it will still gather strength and surge forward, which is the beautiful expectation I hold. However, since 2018, the development of various protocols has actually entered a bottleneck, and it seems to have reached a certain balance in the game with GFW. The whole community can feel that it is no longer focusing on core encryption and feature hiding. More developers are putting their thoughts on airport services (that will provide different VPN severs at the same time). In a sense, the power that Shadowsocks has aroused in the technical field has entered a period of dormancy, which is equivalent to taking the blue pill.
+
+## The plot thickens
+
+### Tightened Control
+
+At the end of July 2017, several VPN-related applications on the China App Store were suddenly removed without any explanation or notification. Users who had already purchased these applications were unable to download them from their purchased items, indicating that Apple's removal directly blocked all channels for downloading from the China App Store. Apple's response was:
+
+> We have received a request to remove some non-compliant VPN apps in China. These apps are not affected in other markets.
+
+The so-called regulations referred to in the response were the "Notice on Cleaning up and Standardizing the Internet Network Access Service Market" issued by the Ministry of Industry and Information Technology in January 2017, which clearly stated:
+
+> The standard applies to enterprises or individuals who have not obtained the qualifications for international communication business, rent international dedicated lines or VPNs, and conduct cross-border telecommunications business activities without the approval of the telecommunications regulatory authority. For foreign trade enterprises and multinational enterprises that need to connect to the Internet across borders for office use, they can rent from telecommunications service operators that have set up international communication entry and exit offices in accordance with the law. The relevant provisions of the "Notice" will not have any impact on their normal operation.
+
+Affected by this, many users could only contact the developers, and many developers could only distribute updates to users through TestFlight. However, because apps distributed through TestFlight expire after 90 days, once the developer stops updating, users will no longer be able to use the software. This risk has also led many users to register for an Apple ID in another region and repurchase the application. Since filing is required by the Ministry of Industry and Information Technology, and individuals do not have the qualifications for filing, it basically means that the removed applications cannot be reinstated. This incident has also received widespread attention and criticism from the international community, and the only consolation is that Apple's removal of the software has forced the government to introduce corresponding clear rules.
+
+In October 2017, with the opening of the 19th National Congress, a large number of routes were blocked, especially SSR. Major airports and Telegram groups were all lamenting. Fortunately, many IPs were unblocked after the congress closed, but the specific ratio is unclear.
+
+During the January 2018 and subsequent "Two Sessions" periods, a larger-scale IP blocking was implemented, covering a wider range and involving various algorithms for circumventing the Great Firewall. Some users reported on Shadowsocks' Issues that their freshly set up server was blocked within just a few minutes.
+
+On September 30, 2018, the Ministry of Public Security issued a [Regulation on Internet Security Supervision and Inspection by Public Security Organs]((http://www.mps.gov.cn/n2254314/n2254409/n4904353/c6263180/content.html)), which was passed at the Ministerial Office Meeting of the Ministry of Public Security on September 5, 2018, and will be implemented from November 1, 2018.
